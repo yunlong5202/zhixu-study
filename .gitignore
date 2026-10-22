@@ -13,6 +13,9 @@ test-results/
 # Private runtime data and credentials must stay local.
 知序学习备份-*.json
 /backups/
+/服务器信息.txt
+/微信收款码.jpg
+/.local/
 .env
 .env.*
 !.env.example
