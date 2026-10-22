@@ -1,0 +1,126 @@
+{
+  "reviewedAt": "2026-10-22",
+  "courseId": "15042",
+  "sourceUrl": "https://zikao.neea.edu.cn/res/Home/2502/9bca2915c4f3cc7ce33a14b1603dd1e7.pdf",
+  "reviewedFile": "src/data/banks/law.js",
+  "sha256": "49ee60983058a8c8e70a4e02e96bcd11ae2d3227871eb62bb453281bfd8b5ccf",
+  "coverageSha256": "4480c164d38c114e7fad5209dce6789892baf332632174b79cffdf96d5ccf098",
+  "scope": "独立检查官方参考样卷18—25、29—31所需知识，是否由具体专题正文支持；未复制题干，不声称官方答案或预计得分。",
+  "statusDefinitions": {
+    "supported": "专题正文已明确承载关键知识，可以支持相应辨析或分层作答。",
+    "partial": "相关内容已出现，但关键定位、术语或展开不足，需要补正文，不能仅凭映射ID认定完整。",
+    "版本歧义": "原样卷与现行规则或新版本的范围、时间表述需要区分，不把本审查当作考试评分口径确认。"
+  },
+  "items": [
+    {
+      "sampleNumber": 18,
+      "pdfPage": 20,
+      "concept": "法治思维中法律至上与其他价值要求的区别",
+      "topicIds": ["law-03", "law-04", "law-05", "law-06", "law-07"],
+      "status": "supported",
+      "evidence": "law-03明确任何组织和个人均不得凭身份或指示取得违法特权；其余专题分别解释权力、权利、公正与程序，支持同域辨析。"
+    },
+    {
+      "sampleNumber": 19,
+      "pdfPage": 20,
+      "concept": "法治素养的首要前提与知识、习惯、能力之间的层次",
+      "topicIds": ["law-08"],
+      "status": "supported",
+      "evidence": "复审时law-08已明确尊重法律权威的首要前提定位，并区分尊法、学法、守法、用法的作用；sf-law-032增加了消费情境实践计划，另有sf-law-extra-001进行层次辨析。",
+      "verificationUrl": "https://www.moj.gov.cn/pub/sfbgw/zwgkztzl/xxxcgcxjpfzsx/fzsxllqy/202403/t20240322_496520.html"
+    },
+    {
+      "sampleNumber": 20,
+      "pdfPage": 21,
+      "concept": "新法对生效前事项的适用与从旧兼从轻的范围",
+      "topicIds": ["theory-08", "theory-09"],
+      "status": "版本歧义",
+      "evidence": "专题准确区分立法法第104条一般不溯及既往、有利保护特别规定与刑法第12条从旧兼从轻。原样卷使用较笼统的法的溯及力设问，不能将专门刑法规则无条件泛化。",
+      "suggestion": "保留一般规则与专门规则分层说明，添加原样卷范围提示，不臆定统一评分口诀。",
+      "verificationUrl": "https://mzt.qinghai.gov.cn/wap/index.php?itemid=10979&moduleid=21&page=52"
+    },
+    {
+      "sampleNumber": 21,
+      "pdfPage": 21,
+      "concept": "我国法渊源的总体结构与制定法主导特征",
+      "topicIds": ["theory-04", "theory-05", "theory-06", "theory-07"],
+      "status": "supported",
+      "evidence": "复审时theory-04已直接补足以宪法为核心、以制定法为主的结构总括，其他专题说明具体形式、个案文书和研究资料的区别，sf-theory-extra-001补充相应辨析。"
+    },
+    {
+      "sampleNumber": 22,
+      "pdfPage": 21,
+      "concept": "民事责任承担方式与行政、刑事责任的区别",
+      "topicIds": ["theory-16", "theory-18"],
+      "status": "supported",
+      "evidence": "theory-18明确停止侵害、赔偿损失等民事方式，区分罚款与罚金和不同责任程序。"
+    },
+    {
+      "sampleNumber": 23,
+      "pdfPage": 21,
+      "concept": "宪法根本法特征、最高效力与修改程序",
+      "topicIds": ["system-01", "system-06"],
+      "status": "supported",
+      "evidence": "正文覆盖根本性内容、最高效力、更加严格的制定修改程序，并区分全国人大与常委会职权。",
+      "note": "未提供修宪具体票数的正文训练；本记录仅确认核心特征足以支持该项概念辨析，不声称逐项选项解释完备。"
+    },
+    {
+      "sampleNumber": 24,
+      "pdfPage": 21,
+      "concept": "劳动与社会保障等领域的部门法定位",
+      "topicIds": ["system-09", "system-15"],
+      "status": "supported",
+      "evidence": "system-15直接说明社会法着重调整劳动、社会保障、特殊群体保护等领域，并与民商、经济法区分。"
+    },
+    {
+      "sampleNumber": 25,
+      "pdfPage": 21,
+      "concept": "正式与非正式法律解释及学理解释定位",
+      "topicIds": ["system-21"],
+      "status": "supported",
+      "evidence": "复审时system-21正文与sf-system-084参考已直接说明正式与非正式解释、学理解释属于非正式解释，术语关系不再只出现在单选解析。",
+      "verificationUrl": "https://ntcc.jsjc.gov.cn/zt/jcll/202403/t20240329_626876.shtml"
+    },
+    {
+      "sampleNumber": 29,
+      "pdfPage": 22,
+      "concept": "国家法律监督与社会监督的类型",
+      "topicIds": ["system-24"],
+      "status": "supported",
+      "evidence": "正文列明国家机关监督中的权力机关、行政、监察和司法等形式，以及公民、社会组织、舆论等社会监督，能形成分类回答。"
+    },
+    {
+      "sampleNumber": 30,
+      "pdfPage": 22,
+      "concept": "我国国家机构的主要组成",
+      "topicIds": ["system-05", "system-06", "system-07", "system-08"],
+      "status": "supported",
+      "evidence": "知识卡覆盖国家权力机关、国家主席、行政机关、中央军委、监察、审判和检察机关，相关专题展开其性质和职权。",
+      "suggestion": "如按完整组织体系复习，可进一步补地方层级与民族自治地方自治机关的对应，不应误把居委会列为行政机关。"
+    },
+    {
+      "sampleNumber": 31,
+      "pdfPage": 22,
+      "concept": "习近平法治思想内容体系的教材与新版纲要口径",
+      "topicIds": ["law-09", "law-10", "law-11", "law-12", "law-13", "law-14", "law-15", "law-16", "law-17", "law-18"],
+      "status": "版本歧义",
+      "evidence": "复审时law-09已经完整补入旧十一个坚持与2025年新版十二个坚持的分组及第五项变化，并有明确版本提示。原参考样卷早于新版，仍须区分材料时间，不据本题库确定本次考试评分口径。",
+      "suggestion": "按题干和适用材料版本组织作答；保留新旧对照，不将任一时间口径宣称为所有年份的唯一表述。",
+      "verificationUrl": "https://www.moj.gov.cn/pub/sfbgw/zwgkztzl/xxxcgcxjpfzsx/fzsxpljj/202511/t20251125_528487.html"
+    }
+  ],
+  "counts": {"supported": 9, "partial": 0, "版本歧义": 2},
+  "contentRecheck": {
+    "questionCount": 262,
+    "checkedAdditions": ["sf-law-extra-001", "sf-law-extra-002", "sf-theory-extra-001", "sf-system-extra-001"],
+    "result": "四道追加题知识定位与答案索引有效、同域选项无明确多解。19、21、25三项正文不足已修复；20仍保留一般规则与专门规则范围提示，31虽已补完整新旧版本对照，仍不将资料口径视为已确认的考试评分口径。",
+    "status": "completed",
+    "finalSingleReview": {
+      "singleCount": 184,
+      "rewrittenOriginalCount": 177,
+      "finalRecheckedIds": ["sf-law-059", "sf-law-066", "sf-theory-010", "sf-theory-014", "sf-theory-059", "sf-theory-063", "sf-theory-066", "sf-system-019", "sf-system-090"],
+      "result": "已读全部单选选项，最后九题逐项复核题干、四项、标答和解析，未见明确错答案或确定多解。题干错误的准确概括不再作为非标答；正确选项文本及索引未变。单选标答位置46/46/46/46。"
+    }
+  },
+  "limitation": "未取得指定2023教材全文或官方评分答案。本审查关注知识支持与版本边界，不能换算预计分数、通过概率或宣称官方认定。"
+}

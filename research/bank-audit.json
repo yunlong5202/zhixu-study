@@ -1,0 +1,1098 @@
+{
+  "generatedAt": "2026-10-22T06:27:08.500Z",
+  "scope": "数据结构、题量、稳定ID、重复题干、专题与大纲要求映射审计；不替代人工内容核验",
+  "passed": true,
+  "counts": {
+    "questions": 805,
+    "indexedQuestions": 715,
+    "legacyQuestions": 90,
+    "topics": 162,
+    "mappedRequirements": 239,
+    "single": 510,
+    "short": 163,
+    "essay": 42
+  },
+  "answerDistribution": [
+    128,
+    128,
+    127,
+    127
+  ],
+  "chapterStats": [
+    {
+      "id": "intro",
+      "title": "担当时代使命",
+      "topics": 14,
+      "questions": 72,
+      "single": 55,
+      "short": 14,
+      "essay": 3,
+      "recallSingle": 19,
+      "understandShort": 14
+    },
+    {
+      "id": "life",
+      "title": "把握人生的方向和道路",
+      "topics": 15,
+      "questions": 63,
+      "single": 45,
+      "short": 15,
+      "essay": 3,
+      "recallSingle": 15,
+      "understandShort": 15
+    },
+    {
+      "id": "belief",
+      "title": "坚定理想信念",
+      "topics": 11,
+      "questions": 47,
+      "single": 33,
+      "short": 11,
+      "essay": 3,
+      "recallSingle": 11,
+      "understandShort": 11
+    },
+    {
+      "id": "spirit",
+      "title": "弘扬中国精神",
+      "topics": 14,
+      "questions": 62,
+      "single": 45,
+      "short": 14,
+      "essay": 3,
+      "recallSingle": 15,
+      "understandShort": 14
+    },
+    {
+      "id": "morality",
+      "title": "加强道德理论学习",
+      "topics": 20,
+      "questions": 89,
+      "single": 63,
+      "short": 20,
+      "essay": 6,
+      "recallSingle": 17,
+      "understandShort": 16
+    },
+    {
+      "id": "character",
+      "title": "培养优良道德品质",
+      "topics": 24,
+      "questions": 104,
+      "single": 73,
+      "short": 25,
+      "essay": 6,
+      "recallSingle": 21,
+      "understandShort": 14
+    },
+    {
+      "id": "law",
+      "title": "推进法治中国建设",
+      "topics": 20,
+      "questions": 88,
+      "single": 62,
+      "short": 20,
+      "essay": 6,
+      "recallSingle": 24,
+      "understandShort": 14
+    },
+    {
+      "id": "theory",
+      "title": "学好法学基础理论",
+      "topics": 19,
+      "questions": 83,
+      "single": 58,
+      "short": 19,
+      "essay": 6,
+      "recallSingle": 27,
+      "understandShort": 16
+    },
+    {
+      "id": "system",
+      "title": "熟悉法律基本制度",
+      "topics": 25,
+      "questions": 107,
+      "single": 76,
+      "short": 25,
+      "essay": 6,
+      "recallSingle": 41,
+      "understandShort": 23
+    }
+  ],
+  "topicStats": [
+    {
+      "id": "intro-01",
+      "chapterId": "intro",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "intro-02",
+      "chapterId": "intro",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "intro-03",
+      "chapterId": "intro",
+      "single": 3,
+      "written": 1
+    },
+    {
+      "id": "intro-04",
+      "chapterId": "intro",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "intro-05",
+      "chapterId": "intro",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "intro-06",
+      "chapterId": "intro",
+      "single": 13,
+      "written": 2
+    },
+    {
+      "id": "intro-07",
+      "chapterId": "intro",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "intro-08",
+      "chapterId": "intro",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "intro-09",
+      "chapterId": "intro",
+      "single": 6,
+      "written": 2
+    },
+    {
+      "id": "intro-10",
+      "chapterId": "intro",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "intro-11",
+      "chapterId": "intro",
+      "single": 3,
+      "written": 3
+    },
+    {
+      "id": "intro-12",
+      "chapterId": "intro",
+      "single": 3,
+      "written": 3
+    },
+    {
+      "id": "intro-13",
+      "chapterId": "intro",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "intro-14",
+      "chapterId": "intro",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "life-01",
+      "chapterId": "life",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "life-02",
+      "chapterId": "life",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "life-03",
+      "chapterId": "life",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "life-04",
+      "chapterId": "life",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "life-05",
+      "chapterId": "life",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "life-06",
+      "chapterId": "life",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "life-07",
+      "chapterId": "life",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "life-08",
+      "chapterId": "life",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "life-09",
+      "chapterId": "life",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "life-10",
+      "chapterId": "life",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "life-11",
+      "chapterId": "life",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "life-12",
+      "chapterId": "life",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "life-13",
+      "chapterId": "life",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "life-14",
+      "chapterId": "life",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "life-15",
+      "chapterId": "life",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "belief-01",
+      "chapterId": "belief",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "belief-02",
+      "chapterId": "belief",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "belief-03",
+      "chapterId": "belief",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "belief-04",
+      "chapterId": "belief",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "belief-05",
+      "chapterId": "belief",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "belief-06",
+      "chapterId": "belief",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "belief-07",
+      "chapterId": "belief",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "belief-08",
+      "chapterId": "belief",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "belief-09",
+      "chapterId": "belief",
+      "single": 3,
+      "written": 3
+    },
+    {
+      "id": "belief-10",
+      "chapterId": "belief",
+      "single": 3,
+      "written": 3
+    },
+    {
+      "id": "belief-11",
+      "chapterId": "belief",
+      "single": 3,
+      "written": 3
+    },
+    {
+      "id": "spirit-01",
+      "chapterId": "spirit",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "spirit-02",
+      "chapterId": "spirit",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "spirit-03",
+      "chapterId": "spirit",
+      "single": 3,
+      "written": 1
+    },
+    {
+      "id": "spirit-04",
+      "chapterId": "spirit",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "spirit-05",
+      "chapterId": "spirit",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "spirit-06",
+      "chapterId": "spirit",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "spirit-07",
+      "chapterId": "spirit",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "spirit-08",
+      "chapterId": "spirit",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "spirit-09",
+      "chapterId": "spirit",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "spirit-10",
+      "chapterId": "spirit",
+      "single": 3,
+      "written": 3
+    },
+    {
+      "id": "spirit-11",
+      "chapterId": "spirit",
+      "single": 3,
+      "written": 3
+    },
+    {
+      "id": "spirit-12",
+      "chapterId": "spirit",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "spirit-13",
+      "chapterId": "spirit",
+      "single": 6,
+      "written": 2
+    },
+    {
+      "id": "spirit-14",
+      "chapterId": "spirit",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "morality-01",
+      "chapterId": "morality",
+      "single": 3,
+      "written": 1
+    },
+    {
+      "id": "morality-02",
+      "chapterId": "morality",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "morality-03",
+      "chapterId": "morality",
+      "single": 3,
+      "written": 1
+    },
+    {
+      "id": "morality-04",
+      "chapterId": "morality",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "morality-05",
+      "chapterId": "morality",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "morality-06",
+      "chapterId": "morality",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "morality-07",
+      "chapterId": "morality",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "morality-08",
+      "chapterId": "morality",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "morality-09",
+      "chapterId": "morality",
+      "single": 3,
+      "written": 3
+    },
+    {
+      "id": "morality-10",
+      "chapterId": "morality",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "morality-11",
+      "chapterId": "morality",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "morality-12",
+      "chapterId": "morality",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "morality-13",
+      "chapterId": "morality",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "morality-14",
+      "chapterId": "morality",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "morality-15",
+      "chapterId": "morality",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "morality-16",
+      "chapterId": "morality",
+      "single": 3,
+      "written": 3
+    },
+    {
+      "id": "morality-17",
+      "chapterId": "morality",
+      "single": 3,
+      "written": 3
+    },
+    {
+      "id": "morality-18",
+      "chapterId": "morality",
+      "single": 6,
+      "written": 2
+    },
+    {
+      "id": "morality-19",
+      "chapterId": "morality",
+      "single": 3,
+      "written": 3
+    },
+    {
+      "id": "morality-20",
+      "chapterId": "morality",
+      "single": 3,
+      "written": 3
+    },
+    {
+      "id": "character-01",
+      "chapterId": "character",
+      "single": 3,
+      "written": 3
+    },
+    {
+      "id": "character-02",
+      "chapterId": "character",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "character-03",
+      "chapterId": "character",
+      "single": 4,
+      "written": 2
+    },
+    {
+      "id": "character-04",
+      "chapterId": "character",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "character-05",
+      "chapterId": "character",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "character-06",
+      "chapterId": "character",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "character-07",
+      "chapterId": "character",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "character-08",
+      "chapterId": "character",
+      "single": 3,
+      "written": 1
+    },
+    {
+      "id": "character-09",
+      "chapterId": "character",
+      "single": 3,
+      "written": 3
+    },
+    {
+      "id": "character-10",
+      "chapterId": "character",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "character-11",
+      "chapterId": "character",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "character-12",
+      "chapterId": "character",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "character-13",
+      "chapterId": "character",
+      "single": 3,
+      "written": 3
+    },
+    {
+      "id": "character-14",
+      "chapterId": "character",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "character-15",
+      "chapterId": "character",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "character-16",
+      "chapterId": "character",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "character-17",
+      "chapterId": "character",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "character-18",
+      "chapterId": "character",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "character-19",
+      "chapterId": "character",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "character-20",
+      "chapterId": "character",
+      "single": 3,
+      "written": 3
+    },
+    {
+      "id": "character-21",
+      "chapterId": "character",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "character-22",
+      "chapterId": "character",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "character-23",
+      "chapterId": "character",
+      "single": 3,
+      "written": 3
+    },
+    {
+      "id": "character-24",
+      "chapterId": "character",
+      "single": 3,
+      "written": 4
+    },
+    {
+      "id": "law-01",
+      "chapterId": "law",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "law-02",
+      "chapterId": "law",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "law-03",
+      "chapterId": "law",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "law-04",
+      "chapterId": "law",
+      "single": 3,
+      "written": 3
+    },
+    {
+      "id": "law-05",
+      "chapterId": "law",
+      "single": 3,
+      "written": 3
+    },
+    {
+      "id": "law-06",
+      "chapterId": "law",
+      "single": 3,
+      "written": 3
+    },
+    {
+      "id": "law-07",
+      "chapterId": "law",
+      "single": 3,
+      "written": 4
+    },
+    {
+      "id": "law-08",
+      "chapterId": "law",
+      "single": 4,
+      "written": 2
+    },
+    {
+      "id": "law-09",
+      "chapterId": "law",
+      "single": 4,
+      "written": 2
+    },
+    {
+      "id": "law-10",
+      "chapterId": "law",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "law-11",
+      "chapterId": "law",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "law-12",
+      "chapterId": "law",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "law-13",
+      "chapterId": "law",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "law-14",
+      "chapterId": "law",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "law-15",
+      "chapterId": "law",
+      "single": 3,
+      "written": 3
+    },
+    {
+      "id": "law-16",
+      "chapterId": "law",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "law-17",
+      "chapterId": "law",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "law-18",
+      "chapterId": "law",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "theory-01",
+      "chapterId": "theory",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "theory-02",
+      "chapterId": "theory",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "theory-03",
+      "chapterId": "theory",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "theory-04",
+      "chapterId": "theory",
+      "single": 4,
+      "written": 2
+    },
+    {
+      "id": "theory-05",
+      "chapterId": "theory",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "theory-06",
+      "chapterId": "theory",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "theory-07",
+      "chapterId": "theory",
+      "single": 3,
+      "written": 3
+    },
+    {
+      "id": "theory-08",
+      "chapterId": "theory",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "theory-09",
+      "chapterId": "theory",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "theory-10",
+      "chapterId": "theory",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "theory-11",
+      "chapterId": "theory",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "theory-12",
+      "chapterId": "theory",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "theory-13",
+      "chapterId": "theory",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "theory-14",
+      "chapterId": "theory",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "theory-15",
+      "chapterId": "theory",
+      "single": 3,
+      "written": 3
+    },
+    {
+      "id": "theory-16",
+      "chapterId": "theory",
+      "single": 3,
+      "written": 3
+    },
+    {
+      "id": "theory-17",
+      "chapterId": "theory",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "theory-18",
+      "chapterId": "theory",
+      "single": 3,
+      "written": 3
+    },
+    {
+      "id": "system-01",
+      "chapterId": "system",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "system-02",
+      "chapterId": "system",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "system-03",
+      "chapterId": "system",
+      "single": 4,
+      "written": 2
+    },
+    {
+      "id": "system-04",
+      "chapterId": "system",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "system-05",
+      "chapterId": "system",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "system-06",
+      "chapterId": "system",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "system-07",
+      "chapterId": "system",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "system-08",
+      "chapterId": "system",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "system-09",
+      "chapterId": "system",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "system-10",
+      "chapterId": "system",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "system-11",
+      "chapterId": "system",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "system-12",
+      "chapterId": "system",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "system-13",
+      "chapterId": "system",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "system-14",
+      "chapterId": "system",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "system-15",
+      "chapterId": "system",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "system-16",
+      "chapterId": "system",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "system-17",
+      "chapterId": "system",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "system-18",
+      "chapterId": "system",
+      "single": 3,
+      "written": 3
+    },
+    {
+      "id": "system-19",
+      "chapterId": "system",
+      "single": 3,
+      "written": 3
+    },
+    {
+      "id": "system-20",
+      "chapterId": "system",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "system-21",
+      "chapterId": "system",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "system-22",
+      "chapterId": "system",
+      "single": 3,
+      "written": 3
+    },
+    {
+      "id": "system-23",
+      "chapterId": "system",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "system-24",
+      "chapterId": "system",
+      "single": 3,
+      "written": 2
+    },
+    {
+      "id": "update-01",
+      "chapterId": "law",
+      "single": 3,
+      "written": 1
+    },
+    {
+      "id": "update-02",
+      "chapterId": "theory",
+      "single": 3,
+      "written": 1
+    },
+    {
+      "id": "update-03",
+      "chapterId": "system",
+      "single": 3,
+      "written": 1
+    },
+    {
+      "id": "update-04",
+      "chapterId": "law",
+      "single": 3,
+      "written": 1
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

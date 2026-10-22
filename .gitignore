@@ -1,0 +1,23 @@
+dist/
+node_modules/
+*.log
+.DS_Store
+playwright-report/
+test-results/
+
+# Local downloads: keep source links and original coverage/review files in Git.
+/research/15042-outline.pdf
+/research/15042-outline.txt
+/research/downloads/
+
+# Private runtime data and credentials must stay local.
+知序学习备份-*.json
+/backups/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Historical screenshot superseded by the current v0.2 previews.
+/screenshots/知序首页.jpg

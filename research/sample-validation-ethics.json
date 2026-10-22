@@ -1,0 +1,15 @@
+{
+  "reviewDate": "2026-10-22",
+  "sourceUrl": "https://zikao.neea.edu.cn/res/Home/2502/9bca2915c4f3cc7ce33a14b1603dd1e7.pdf",
+  "method": "独立核对官方参考样卷所需概念；仅记录概念及专题支持度，不复制题干或选项。",
+  "samples": [
+    { "sampleNumber": 12, "pdfPage": 19, "concept": "以公共担当和整体利益识别中华传统美德的实例", "topicIds": ["morality-08"], "status": "supported" },
+    { "sampleNumber": 13, "pdfPage": 20, "concept": "社会主义道德建设的核心及其与原则、重点的区别", "topicIds": ["morality-17", "morality-20"], "status": "supported" },
+    { "sampleNumber": 14, "pdfPage": 20, "concept": "网络空间扩展所体现的公共生活活动范围广泛性", "topicIds": ["character-01", "character-06"], "status": "supported" },
+    { "sampleNumber": 15, "pdfPage": 20, "concept": "社会公德作为公共生活共同遵循的基础行为规范", "topicIds": ["character-03"], "status": "supported" },
+    { "sampleNumber": 16, "pdfPage": 20, "concept": "家庭美德中关爱老人和未成年人的基本要求", "topicIds": ["character-17"], "status": "supported" },
+    { "sampleNumber": 17, "pdfPage": 20, "concept": "通过反省检验并纠正自身偏差的省察克治方法", "topicIds": ["character-23"], "status": "supported" },
+    { "sampleNumber": 28, "pdfPage": 22, "concept": "良好个人品德对人格成长、其他道德实践和社会风尚的意义", "topicIds": ["character-22", "character-20"], "status": "supported" },
+    { "sampleNumber": 32, "pdfPage": 22, "concept": "道德对经济社会关系、精神文化、秩序及个人发展的作用与历史条件", "topicIds": ["morality-05", "morality-02", "morality-06"], "status": "supported" }
+  ]
+}

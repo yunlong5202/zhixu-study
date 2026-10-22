@@ -1,0 +1,119 @@
+{
+  "batch": "foundations-independent-sample-check",
+  "reviewedAt": "2026-10-22",
+  "sourceUrl": "https://zikao.neea.edu.cn/res/Home/2502/9bca2915c4f3cc7ce33a14b1603dd1e7.pdf",
+  "sourceText": "research/15042-outline.txt",
+  "bankFile": "src/data/banks/foundations.js",
+  "reviewedBankSha256": "41a625c8adf5f2dd697372f8b9101d76b3115203dbab0affb094aea6103cb201",
+  "reviewedBankCounts": { "topics": 54, "questions": 244, "single": 178, "short": 54, "essay": 12 },
+  "reviewScope": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 26, 27, 33],
+  "method": "不复制样卷题干；独立提炼每题需要的概念，再检查指定topic的summary、keyPoints及关联参考作答是否实际讲到。supported只表示概念支持充分；partial表示有关联但展开不足。",
+  "limitations": [
+    "官方PDF未附答案表或阅卷评分细则，本文件不提供官方答案认定。",
+    "这不是考试作答实验，不据此计算得分、通过率或题库对正式考试的命中率。",
+    "仅审查A批负责的14个样卷题目，不外推为整份样卷或整门课程覆盖结论。",
+    "题目id会随作者增加训练题而变化，因此使用稳定topicIds与字段内容定位证据。"
+  ],
+  "items": [
+    {
+      "sampleNumber": 1, "pdfPage": 18, "type": "single",
+      "requiredConcept": "区分人生目的、人生态度、人生价值分别回答的问题",
+      "topicIds": ["life-05", "life-06", "life-07", "life-08"],
+      "status": "supported",
+      "evidence": "life-05列出人生观三部分；life-06说明为何生活，life-07说明怎样对待生活，life-08明确人生价值评价人生实践的意义。",
+      "optionUniqueness": "概念区分明确，人工检查未见第二个同等匹配选项；未用官方答案表认证。"
+    },
+    {
+      "sampleNumber": 2, "pdfPage": 18, "type": "single",
+      "requiredConcept": "绿色发展的核心取向是人与自然和谐共生",
+      "topicIds": ["life-11"], "status": "supported",
+      "evidence": "life-11的summary、keyPoints和第1道关联单选都明确节约资源、保护环境与和谐共生，并辨析先破坏后治理及人与自然隔绝。",
+      "optionUniqueness": "目标概念明确，人工检查未见竞争性答案；未用官方答案表认证。"
+    },
+    {
+      "sampleNumber": 3, "pdfPage": 18, "type": "single",
+      "requiredConcept": "信念由认知、情感和意志相统一，并可在实践中形成发展",
+      "topicIds": ["belief-02", "belief-04"], "status": "supported",
+      "evidence": "belief-02明确三个组成和身体力行；belief-04说明相对稳定而非永不变化，足以辨析将信念当纯想象、永不外显或绝对不变的说法。",
+      "optionUniqueness": "组成与稳定性边界均有讲解，人工检查概念对应明确；未用官方答案表认证。"
+    },
+    {
+      "sampleNumber": 4, "pdfPage": 18, "type": "single",
+      "requiredConcept": "按内容区分生活、职业、社会政治和道德理想",
+      "topicIds": ["belief-03"], "status": "supported",
+      "evidence": "belief-03分别解释四类内容，道德理想指向人格与道德境界，关联练习专门考查人格追求与岗位、生活方式的区别。",
+      "optionUniqueness": "分类标准一致，人工检查目标类别明确；未用官方答案表认证。"
+    },
+    {
+      "sampleNumber": 5, "pdfPage": 18, "type": "single",
+      "requiredConcept": "中国特色社会主义共同理想与以往阶段目标、远大理想的区别",
+      "topicIds": ["belief-07", "belief-08"], "status": "supported",
+      "evidence": "belief-07直接说明坚持和发展中国特色社会主义的共同方向；belief-08区分现阶段共同追求和远大理想。概念足以辨析题目，不以本题支持度替代共同理想完整简答的审查。",
+      "optionUniqueness": "现阶段方向与不同历史阶段目标可以区分；未用官方答案表认证。"
+    },
+    {
+      "sampleNumber": 6, "pdfPage": 18, "type": "single",
+      "requiredConcept": "远大理想实现具有长期性、曲折性和艰巨性，不能跳过现实阶段",
+      "topicIds": ["belief-08", "belief-10"], "status": "supported",
+      "evidence": "belief-08说明阶段任务是现实路径，belief-10解释时间积累、过程反复和克服困难，明确反对急于求成或消极等待。",
+      "optionUniqueness": "实现过程的判断与虚无论、跳阶段等选项不同，人工检查对应明确；未用官方答案表认证。"
+    },
+    {
+      "sampleNumber": 7, "pdfPage": 19, "type": "single",
+      "requiredConcept": "在实践中协调理想与现实，既立足现实又朝理想改进",
+      "topicIds": ["belief-10", "belief-11"], "status": "supported",
+      "evidence": "belief-10把实践作为转化途径；belief-11区分以理想苛求现实、因现实不足否定理想两种偏向，并要求从现实条件作具体行动。",
+      "optionUniqueness": "存在措辞敏感性：某个备选项笼统表述理想作为衡量标准时，脱离其否定现实的语境可能有不同理解；按本题最符合要求原则，应优先采用实践转化思路。未声称已获官方唯一答案认证。"
+    },
+    {
+      "sampleNumber": 8, "pdfPage": 19, "type": "single",
+      "requiredConcept": "爱国主义要求理解历史文化，认识优秀传统文化的精神根基作用",
+      "topicIds": ["spirit-07", "spirit-10"], "status": "supported",
+      "evidence": "spirit-07列出热爱文化的内容；spirit-10解释共同历史记忆、精神资源和民族认同，并要求传承与交流互鉴。足以识别文化创造材料的直接指向。",
+      "optionUniqueness": "题目材料直接指向历史文化，其余责任虽有价值但不是该材料的直接归纳；未用官方答案表认证。"
+    },
+    {
+      "sampleNumber": 9, "pdfPage": 19, "type": "single",
+      "requiredConcept": "当代中国爱国主义本质及爱国、爱党、爱社会主义的统一",
+      "topicIds": ["spirit-08", "spirit-10"], "status": "supported",
+      "evidence": "spirit-08直接列明相统一的当代要求；spirit-10辨析文化自信与不加选择恢复传统、封闭排斥交流之间的差别。",
+      "optionUniqueness": "核心术语有直接支持，人工检查未见同等匹配的竞争项；未用官方答案表认证。"
+    },
+    {
+      "sampleNumber": 10, "pdfPage": 19, "type": "single",
+      "requiredConcept": "爱国主义四方面内容及基本政治要求的对应关系",
+      "topicIds": ["spirit-07"], "status": "supported",
+      "evidence": "spirit-07的summary分别说明河山的自然基础、同胞、文化和国家的不同侧重，并明确国家之爱体现政治要求；关联第1道单选同样辨析此关系。",
+      "optionUniqueness": "四方面内容与政治要求的定位明确；未用官方答案表认证。"
+    },
+    {
+      "sampleNumber": 11, "pdfPage": 19, "type": "single",
+      "requiredConcept": "总体国家安全观的准确名称与多领域统筹要求",
+      "topicIds": ["spirit-12"], "status": "supported",
+      "evidence": "spirit-12准确使用总体国家安全观，列出内外、国土与国民、传统与非传统、发展与安全、自身与共同安全等统筹关系，易混提醒还区分总体与全面。",
+      "optionUniqueness": "术语定位明确，人工检查可识别相近但不规范的名称；未用官方答案表认证。"
+    },
+    {
+      "sampleNumber": 26, "pdfPage": 22, "type": "short",
+      "requiredConcept": "分别定义思想道德素质、法治素养",
+      "topicIds": ["intro-11", "intro-12"], "status": "supported",
+      "evidence": "intro-11说明思想观念、政治品质、道德品质及行为中较稳定的素质；intro-12逐项列明尊法意识、学法水平、守法习惯、用法能力，关联简答提供定义与辨析。",
+      "gradingClaim": "支持组织概念性回答；官方没有提供本题评分细则，未据此给出分数。"
+    },
+    {
+      "sampleNumber": 27, "pdfPage": 22, "type": "short",
+      "requiredConcept": "定义中国精神，并列明民族精神和时代精神及各自核心",
+      "topicIds": ["spirit-01", "spirit-02"], "status": "supported",
+      "evidence": "spirit-01将中国精神概括为民族共同精神品格，明确民族精神以爱国主义为核心、时代精神以改革创新为核心；spirit-02解释两者区别联系。",
+      "gradingClaim": "核心概念和关系可从讲解组织回答；没有官方评分细则，未据此给出分数。"
+    },
+    {
+      "sampleNumber": 33, "pdfPage": 22, "type": "essay",
+      "requiredConcept": "自然属性与社会属性的含义、统一关系，以及社会属性成为根本属性的依据",
+      "topicIds": ["life-02", "life-03"], "status": "supported",
+      "evidence": "修订后的life-03及sf-life-012已经定义生物性基础与社会实践形成的特征，说明两种属性统一；新增社会实践和关系将人与动物区别开来的论证，并说明现实个体差别与社会关系及实践经历有关。life-02另分别解释现实、具体、历史和发展四个方面，可据此组织有理由的论述。",
+      "followUpOptional": "教学上仍可增加一个自然需要以社会方式得到满足的日常例子，帮助理解，但当前核心概念与论证已可定位。",
+      "gradingClaim": "支持组织概念与理由齐备的回答；没有官方评分细则，不认定实际得分。"
+    }
+  ]
+}

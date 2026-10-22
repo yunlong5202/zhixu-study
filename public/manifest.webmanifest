@@ -1,0 +1,11 @@
+{
+  "name": "知序自考 · 思想道德与法治",
+  "short_name": "知序自考",
+  "lang": "zh-CN",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#bf4e40",
+  "background_color": "#f8f9fb",
+  "icons": [{ "src": "/public/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

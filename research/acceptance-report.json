@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2026-10-22T06:27:08.609Z",
+  "questions": 805,
+  "indexedQuestions": 715,
+  "topics": 162,
+  "sampleSetComplete": true,
+  "statusCounts": {
+    "supported": 31,
+    "版本歧义": 2
+  },
+  "fingerprints": [
+    {
+      "path": "src/data/banks/foundations.js",
+      "sha256": "41a625c8adf5f2dd697372f8b9101d76b3115203dbab0affb094aea6103cb201",
+      "reviewMatches": true
+    },
+    {
+      "path": "src/data/banks/ethics.js",
+      "sha256": "0a754ad8f091fa10a394832027cf242a8156c0cfbed29729b1296cf48ebb4a2c",
+      "reviewMatches": true
+    },
+    {
+      "path": "src/data/banks/law.js",
+      "sha256": "49ee60983058a8c8e70a4e02e96bcd11ae2d3227871eb62bb453281bfd8b5ccf",
+      "reviewMatches": true
+    },
+    {
+      "path": "src/data/banks/updates.js",
+      "sha256": "52b0e3c75cf99ef71ba98825dc5e9745d55aeb30feaee3d9b41590b8f9b1f4a4",
+      "reviewMatches": true
+    }
+  ],
+  "limitations": [
+    "原创训练内容，非官方真题或评分细则。",
+    "样卷知识支持核查不等于考试作答实验，不推断命中率或通过率。",
+    "通过率未做考生群体实测；备考检查是软件训练标准，不能保证个人考试结果。"
+  ]
+}

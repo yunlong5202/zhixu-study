@@ -1,0 +1,48 @@
+# HTTP site template: include this server block inside nginx.conf's http {}.
+# The parent http {} must load MIME mappings, for example:
+#   include /etc/nginx/mime.types;
+#   default_type application/octet-stream;
+# Replace the domain and root. This file does not enable HTTPS.
+server {
+    listen 80;
+    server_name study.example.com;
+
+    # Upload the complete build output here, including src/ and public/.
+    root /var/www/zhixu/dist;
+    index index.html;
+    autoindex off;
+    charset utf-8;
+
+    gzip on;
+    gzip_vary on;
+    gzip_min_length 1024;
+    gzip_comp_level 5;
+    # text/html is compressed automatically when gzip is enabled.
+    gzip_types text/plain text/css text/javascript application/javascript
+               application/json application/manifest+json image/svg+xml;
+
+    location = / {
+        try_files /index.html =404;
+        add_header Cache-Control "no-cache";
+    }
+
+    location = /index.html {
+        try_files $uri =404;
+        add_header Cache-Control "no-cache";
+    }
+
+    # Some distribution MIME tables omit .webmanifest.
+    location = /public/manifest.webmanifest {
+        types { application/manifest+json webmanifest; }
+        try_files $uri =404;
+        add_header Cache-Control "public, max-age=300";
+    }
+
+    location / {
+        # Routes use URL fragments (#...), so no SPA fallback is needed.
+        # A missing JS/CSS file must return 404 rather than index.html.
+        try_files $uri =404;
+        # Build assets have no content hashes: avoid long-lived caches.
+        add_header Cache-Control "public, max-age=300";
+    }
+}

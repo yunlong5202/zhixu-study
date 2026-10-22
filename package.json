@@ -1,0 +1,21 @@
+{
+  "name": "zhixu-study",
+  "version": "0.2.0",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yunlong5202/zhixu-study.git"
+  },
+  "type": "module",
+  "description": "知序自考 · 思想道德与法治刷题与笔试训练",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node scripts/check.mjs",
+    "audit": "node scripts/audit-bank.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

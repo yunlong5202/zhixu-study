@@ -1,0 +1,1179 @@
+{
+  "batch": "C-law-theory-system",
+  "sourceUrl": "https://zikao.neea.edu.cn/res/Home/2502/9bca2915c4f3cc7ce33a14b1603dd1e7.pdf?download=outline.pdf",
+  "verifiedAt": "2026-10-22",
+  "chapters": [
+    {
+      "chapterId": "law",
+      "pdfPage": 13,
+      "title": "第六章 推进法治中国建设",
+      "requirements": [
+        {
+          "section": "第一节 法治思维与法治素养",
+          "level": "recall",
+          "requirement": "法治、法制、人治的概念",
+          "topicIds": [
+            "law-01"
+          ]
+        },
+        {
+          "section": "第一节 法治思维与法治素养",
+          "level": "recall",
+          "requirement": "法治思维的概念",
+          "topicIds": [
+            "law-03"
+          ]
+        },
+        {
+          "section": "第一节 法治思维与法治素养",
+          "level": "recall",
+          "requirement": "法治素养的概念",
+          "topicIds": [
+            "law-08"
+          ]
+        },
+        {
+          "section": "第一节 法治思维与法治素养",
+          "level": "understand",
+          "requirement": "法治与人治的区别",
+          "topicIds": [
+            "law-01"
+          ]
+        },
+        {
+          "section": "第一节 法治思维与法治素养",
+          "level": "understand",
+          "requirement": "法治与法制的区别与联系",
+          "topicIds": [
+            "law-02"
+          ]
+        },
+        {
+          "section": "第一节 法治思维与法治素养",
+          "level": "understand",
+          "requirement": "法治思维的基本内容",
+          "topicIds": [
+            "law-03",
+            "law-04",
+            "law-05",
+            "law-06",
+            "law-07"
+          ]
+        },
+        {
+          "section": "第一节 法治思维与法治素养",
+          "level": "apply",
+          "requirement": "深刻理解法治思维的内容，掌握培育法治素养的途径，不断增强法治观念，提升法治素养",
+          "topicIds": [
+            "law-03",
+            "law-04",
+            "law-05",
+            "law-06",
+            "law-07",
+            "law-08"
+          ]
+        },
+        {
+          "section": "第二节 全面依法治国的正确方向",
+          "level": "recall",
+          "requirement": "习近平法治思想的内容体系",
+          "topicIds": [
+            "law-09"
+          ]
+        },
+        {
+          "section": "第二节 全面依法治国的正确方向",
+          "level": "recall",
+          "requirement": "中国特色社会主义法治道路的核心要义",
+          "topicIds": [
+            "law-10"
+          ]
+        },
+        {
+          "section": "第二节 全面依法治国的正确方向",
+          "level": "understand",
+          "requirement": "习近平法治思想的重大意义",
+          "topicIds": [
+            "law-10"
+          ]
+        },
+        {
+          "section": "第二节 全面依法治国的正确方向",
+          "level": "understand",
+          "requirement": "中国特色社会主义法治道路的基本原则",
+          "topicIds": [
+            "law-11"
+          ]
+        },
+        {
+          "section": "第二节 全面依法治国的正确方向",
+          "level": "apply",
+          "requirement": "以习近平法治思想为指导，增加对中国特色社会主义法治道路的理论认同和自信",
+          "topicIds": [
+            "law-09",
+            "law-10",
+            "law-11"
+          ]
+        },
+        {
+          "section": "第三节 建设法治中国",
+          "level": "recall",
+          "requirement": "中国特色社会主义法治体系的构成",
+          "topicIds": [
+            "law-12"
+          ]
+        },
+        {
+          "section": "第三节 建设法治中国",
+          "level": "recall",
+          "requirement": "全面依法治国的总体布局",
+          "topicIds": [
+            "law-14"
+          ]
+        },
+        {
+          "section": "第三节 建设法治中国",
+          "level": "recall",
+          "requirement": "全面依法治国的总体要求",
+          "topicIds": [
+            "law-15"
+          ]
+        },
+        {
+          "section": "第三节 建设法治中国",
+          "level": "understand",
+          "requirement": "中国特色社会主义法治体系的要求",
+          "topicIds": [
+            "law-12",
+            "law-13"
+          ]
+        },
+        {
+          "section": "第三节 建设法治中国",
+          "level": "understand",
+          "requirement": "全面依法治国的重点任务和基础工程",
+          "topicIds": [
+            "law-16"
+          ]
+        },
+        {
+          "section": "第三节 建设法治中国",
+          "level": "understand",
+          "requirement": "科学立法、严格执法、公正司法、全民守法的要求",
+          "topicIds": [
+            "law-17",
+            "law-18"
+          ]
+        },
+        {
+          "section": "第三节 建设法治中国",
+          "level": "apply",
+          "requirement": "深入理解全方位、全层次、全过程视角下全面依法治国的各项要求，推进法治中国建设",
+          "topicIds": [
+            "law-12",
+            "law-13",
+            "law-14",
+            "law-15",
+            "law-16",
+            "law-17",
+            "law-18"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "theory",
+      "pdfPage": 14,
+      "title": "第七章 学好法学基础理论",
+      "requirements": [
+        {
+          "section": "第一节 法的概念与特征",
+          "level": "recall",
+          "requirement": "法的概念",
+          "topicIds": [
+            "theory-01"
+          ]
+        },
+        {
+          "section": "第一节 法的概念与特征",
+          "level": "recall",
+          "requirement": "社会主义法的本质",
+          "topicIds": [
+            "theory-02"
+          ]
+        },
+        {
+          "section": "第一节 法的概念与特征",
+          "level": "understand",
+          "requirement": "法的本质",
+          "topicIds": [
+            "theory-01",
+            "theory-02"
+          ]
+        },
+        {
+          "section": "第一节 法的概念与特征",
+          "level": "understand",
+          "requirement": "法的基本特征",
+          "topicIds": [
+            "theory-03"
+          ]
+        },
+        {
+          "section": "第一节 法的概念与特征",
+          "level": "apply",
+          "requirement": "深刻理解法的本质与特征，增加对社会主义法的认同",
+          "topicIds": [
+            "theory-01",
+            "theory-02",
+            "theory-03"
+          ]
+        },
+        {
+          "section": "第二节 法的渊源与效力",
+          "level": "recall",
+          "requirement": "法的渊源的概念",
+          "topicIds": [
+            "theory-04"
+          ]
+        },
+        {
+          "section": "第二节 法的渊源与效力",
+          "level": "recall",
+          "requirement": "法的效力的概念",
+          "topicIds": [
+            "theory-07"
+          ]
+        },
+        {
+          "section": "第二节 法的渊源与效力",
+          "level": "recall",
+          "requirement": "法的溯及力",
+          "topicIds": [
+            "theory-09"
+          ]
+        },
+        {
+          "section": "第二节 法的渊源与效力",
+          "level": "understand",
+          "requirement": "当代中国法的渊源",
+          "topicIds": [
+            "theory-04",
+            "theory-05",
+            "theory-06",
+            "theory-07"
+          ]
+        },
+        {
+          "section": "第二节 法的渊源与效力",
+          "level": "understand",
+          "requirement": "法的时间效力",
+          "topicIds": [
+            "theory-08",
+            "theory-09"
+          ]
+        },
+        {
+          "section": "第二节 法的渊源与效力",
+          "level": "understand",
+          "requirement": "法的空间效力",
+          "topicIds": [
+            "theory-10"
+          ]
+        },
+        {
+          "section": "第二节 法的渊源与效力",
+          "level": "understand",
+          "requirement": "法的对人效力",
+          "topicIds": [
+            "theory-11"
+          ]
+        },
+        {
+          "section": "第二节 法的渊源与效力",
+          "level": "apply",
+          "requirement": "理解当代中国法的渊源，正确区分一个文件在我国是否具有法律效力",
+          "topicIds": [
+            "theory-04",
+            "theory-05",
+            "theory-06",
+            "theory-07",
+            "theory-08",
+            "theory-09",
+            "theory-10",
+            "theory-11"
+          ]
+        },
+        {
+          "section": "第三节 法律关系与法律责任",
+          "level": "recall",
+          "requirement": "法律关系的概念",
+          "topicIds": [
+            "theory-12"
+          ]
+        },
+        {
+          "section": "第三节 法律关系与法律责任",
+          "level": "recall",
+          "requirement": "法律关系主体的概念",
+          "topicIds": [
+            "theory-13"
+          ]
+        },
+        {
+          "section": "第三节 法律关系与法律责任",
+          "level": "recall",
+          "requirement": "法律关系客体的概念",
+          "topicIds": [
+            "theory-14"
+          ]
+        },
+        {
+          "section": "第三节 法律关系与法律责任",
+          "level": "recall",
+          "requirement": "法律关系内容的概念",
+          "topicIds": [
+            "theory-15"
+          ]
+        },
+        {
+          "section": "第三节 法律关系与法律责任",
+          "level": "recall",
+          "requirement": "法律权利的概念",
+          "topicIds": [
+            "theory-15"
+          ]
+        },
+        {
+          "section": "第三节 法律关系与法律责任",
+          "level": "recall",
+          "requirement": "法律义务的概念",
+          "topicIds": [
+            "theory-15"
+          ]
+        },
+        {
+          "section": "第三节 法律关系与法律责任",
+          "level": "recall",
+          "requirement": "法律责任的概念",
+          "topicIds": [
+            "theory-16"
+          ]
+        },
+        {
+          "section": "第三节 法律关系与法律责任",
+          "level": "understand",
+          "requirement": "法律关系主体的分类",
+          "topicIds": [
+            "theory-13"
+          ]
+        },
+        {
+          "section": "第三节 法律关系与法律责任",
+          "level": "understand",
+          "requirement": "法律关系客体的分类",
+          "topicIds": [
+            "theory-14"
+          ]
+        },
+        {
+          "section": "第三节 法律关系与法律责任",
+          "level": "understand",
+          "requirement": "法律责任的构成要件",
+          "topicIds": [
+            "theory-17"
+          ]
+        },
+        {
+          "section": "第三节 法律关系与法律责任",
+          "level": "understand",
+          "requirement": "法律责任的分类",
+          "topicIds": [
+            "theory-18"
+          ]
+        },
+        {
+          "section": "第三节 法律关系与法律责任",
+          "level": "apply",
+          "requirement": "正确理解法律权利与法律义务的关系，依法行使权利、履行义务",
+          "topicIds": [
+            "theory-15"
+          ]
+        }
+      ]
+    },
+    {
+      "chapterId": "system",
+      "pdfPage": 15,
+      "title": "第八章 熟悉法律基本制度",
+      "requirements": [
+        {
+          "section": "第一节 宪法是根本法",
+          "level": "recall",
+          "requirement": "我国公民的基本权利",
+          "topicIds": [
+            "system-02",
+            "system-03"
+          ]
+        },
+        {
+          "section": "第一节 宪法是根本法",
+          "level": "recall",
+          "requirement": "我国公民的基本义务",
+          "topicIds": [
+            "system-04"
+          ]
+        },
+        {
+          "section": "第一节 宪法是根本法",
+          "level": "recall",
+          "requirement": "国家机构的构成",
+          "topicIds": [
+            "system-05",
+            "system-06",
+            "system-07",
+            "system-08"
+          ]
+        },
+        {
+          "section": "第一节 宪法是根本法",
+          "level": "understand",
+          "requirement": "宪法的特征",
+          "topicIds": [
+            "system-01"
+          ]
+        },
+        {
+          "section": "第一节 宪法是根本法",
+          "level": "understand",
+          "requirement": "宪法的基本原则",
+          "topicIds": [
+            "system-01"
+          ]
+        },
+        {
+          "section": "第一节 宪法是根本法",
+          "level": "understand",
+          "requirement": "国家机构的职权",
+          "topicIds": [
+            "system-06",
+            "system-07",
+            "system-08"
+          ]
+        },
+        {
+          "section": "第一节 宪法是根本法",
+          "level": "apply",
+          "requirement": "深刻理解我国宪法的特征与原则，积极行使公民权利、履行公民义务",
+          "topicIds": [
+            "system-01",
+            "system-02",
+            "system-03",
+            "system-04",
+            "system-05",
+            "system-06",
+            "system-07",
+            "system-08"
+          ]
+        },
+        {
+          "section": "第二节 中国特色社会主义法律体系",
+          "level": "recall",
+          "requirement": "法律部门的概念",
+          "topicIds": [
+            "system-09"
+          ]
+        },
+        {
+          "section": "第二节 中国特色社会主义法律体系",
+          "level": "recall",
+          "requirement": "法律体系的概念",
+          "topicIds": [
+            "system-09"
+          ]
+        },
+        {
+          "section": "第二节 中国特色社会主义法律体系",
+          "level": "recall",
+          "requirement": "宪法相关法的概念",
+          "topicIds": [
+            "system-10"
+          ]
+        },
+        {
+          "section": "第二节 中国特色社会主义法律体系",
+          "level": "recall",
+          "requirement": "民法商法的概念",
+          "topicIds": [
+            "system-11"
+          ]
+        },
+        {
+          "section": "第二节 中国特色社会主义法律体系",
+          "level": "recall",
+          "requirement": "行政法的概念",
+          "topicIds": [
+            "system-12"
+          ]
+        },
+        {
+          "section": "第二节 中国特色社会主义法律体系",
+          "level": "recall",
+          "requirement": "经济法的概念",
+          "topicIds": [
+            "system-13"
+          ]
+        },
+        {
+          "section": "第二节 中国特色社会主义法律体系",
+          "level": "recall",
+          "requirement": "环境资源法的概念",
+          "topicIds": [
+            "system-14"
+          ]
+        },
+        {
+          "section": "第二节 中国特色社会主义法律体系",
+          "level": "recall",
+          "requirement": "社会法的概念",
+          "topicIds": [
+            "system-15"
+          ]
+        },
+        {
+          "section": "第二节 中国特色社会主义法律体系",
+          "level": "recall",
+          "requirement": "军事法的概念",
+          "topicIds": [
+            "system-16"
+          ]
+        },
+        {
+          "section": "第二节 中国特色社会主义法律体系",
+          "level": "recall",
+          "requirement": "刑法的概念",
+          "topicIds": [
+            "system-17"
+          ]
+        },
+        {
+          "section": "第二节 中国特色社会主义法律体系",
+          "level": "recall",
+          "requirement": "诉讼与非诉讼程序法的概念",
+          "topicIds": [
+            "system-18"
+          ]
+        },
+        {
+          "section": "第二节 中国特色社会主义法律体系",
+          "level": "understand",
+          "requirement": "中国特色社会主义法律体系的构成",
+          "topicIds": [
+            "system-09",
+            "system-10",
+            "system-11",
+            "system-12",
+            "system-13",
+            "system-14",
+            "system-15",
+            "system-16",
+            "system-17",
+            "system-18"
+          ]
+        },
+        {
+          "section": "第二节 中国特色社会主义法律体系",
+          "level": "understand",
+          "requirement": "宪法相关法的构成",
+          "topicIds": [
+            "system-10"
+          ]
+        },
+        {
+          "section": "第二节 中国特色社会主义法律体系",
+          "level": "understand",
+          "requirement": "民法商法的构成",
+          "topicIds": [
+            "system-11"
+          ]
+        },
+        {
+          "section": "第二节 中国特色社会主义法律体系",
+          "level": "understand",
+          "requirement": "行政法的构成",
+          "topicIds": [
+            "system-12"
+          ]
+        },
+        {
+          "section": "第二节 中国特色社会主义法律体系",
+          "level": "understand",
+          "requirement": "经济法的构成",
+          "topicIds": [
+            "system-13"
+          ]
+        },
+        {
+          "section": "第二节 中国特色社会主义法律体系",
+          "level": "understand",
+          "requirement": "环境资源法的构成",
+          "topicIds": [
+            "system-14"
+          ]
+        },
+        {
+          "section": "第二节 中国特色社会主义法律体系",
+          "level": "understand",
+          "requirement": "社会法的构成",
+          "topicIds": [
+            "system-15"
+          ]
+        },
+        {
+          "section": "第二节 中国特色社会主义法律体系",
+          "level": "understand",
+          "requirement": "军事法的构成",
+          "topicIds": [
+            "system-16"
+          ]
+        },
+        {
+          "section": "第二节 中国特色社会主义法律体系",
+          "level": "understand",
+          "requirement": "刑法的构成",
+          "topicIds": [
+            "system-17"
+          ]
+        },
+        {
+          "section": "第二节 中国特色社会主义法律体系",
+          "level": "understand",
+          "requirement": "诉讼与非诉讼程序法的构成",
+          "topicIds": [
+            "system-18"
+          ]
+        },
+        {
+          "section": "第二节 中国特色社会主义法律体系",
+          "level": "apply",
+          "requirement": "了解中国特色社会主义法律体系的基本框架，尊法学法守法用法",
+          "topicIds": [
+            "system-09",
+            "system-10",
+            "system-11",
+            "system-12",
+            "system-13",
+            "system-14",
+            "system-15",
+            "system-16",
+            "system-17",
+            "system-18"
+          ]
+        },
+        {
+          "section": "第三节 我国社会主义法律的运行与监督",
+          "level": "recall",
+          "requirement": "法律运行与实施的概念",
+          "topicIds": [
+            "system-19"
+          ]
+        },
+        {
+          "section": "第三节 我国社会主义法律的运行与监督",
+          "level": "recall",
+          "requirement": "法律制定的概念",
+          "topicIds": [
+            "system-19",
+            "system-20"
+          ]
+        },
+        {
+          "section": "第三节 我国社会主义法律的运行与监督",
+          "level": "recall",
+          "requirement": "法律执行的概念",
+          "topicIds": [
+            "system-22"
+          ]
+        },
+        {
+          "section": "第三节 我国社会主义法律的运行与监督",
+          "level": "recall",
+          "requirement": "法律适用的概念",
+          "topicIds": [
+            "system-22"
+          ]
+        },
+        {
+          "section": "第三节 我国社会主义法律的运行与监督",
+          "level": "recall",
+          "requirement": "法律遵守的概念",
+          "topicIds": [
+            "system-23"
+          ]
+        },
+        {
+          "section": "第三节 我国社会主义法律的运行与监督",
+          "level": "recall",
+          "requirement": "立法权限与程序",
+          "topicIds": [
+            "system-20"
+          ]
+        },
+        {
+          "section": "第三节 我国社会主义法律的运行与监督",
+          "level": "recall",
+          "requirement": "法律监督的概念与类型",
+          "topicIds": [
+            "system-24"
+          ]
+        },
+        {
+          "section": "第三节 我国社会主义法律的运行与监督",
+          "level": "understand",
+          "requirement": "法律文件的完善方式",
+          "topicIds": [
+            "system-21"
+          ]
+        },
+        {
+          "section": "第三节 我国社会主义法律的运行与监督",
+          "level": "understand",
+          "requirement": "法律执行与法律适用的特点与原则",
+          "topicIds": [
+            "system-22"
+          ]
+        },
+        {
+          "section": "第三节 我国社会主义法律的运行与监督",
+          "level": "understand",
+          "requirement": "守法的主体与条件",
+          "topicIds": [
+            "system-23"
+          ]
+        },
+        {
+          "section": "第三节 我国社会主义法律的运行与监督",
+          "level": "apply",
+          "requirement": "熟悉我国社会主义法律制定、实施与监督的全过程，自觉守法、遇事找法、解决问题靠法",
+          "topicIds": [
+            "system-19",
+            "system-20",
+            "system-21",
+            "system-22",
+            "system-23",
+            "system-24"
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "outline-2025",
+      "title": "教育部教育考试院：思想道德与法治自学考试大纲",
+      "url": "https://zikao.neea.edu.cn/res/Home/2502/9bca2915c4f3cc7ce33a14b1603dd1e7.pdf?download=outline.pdf",
+      "scope": "第六至八章PDF第13—15页；指定2023年版教材与考试前六个月法律更新规则见第16页",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "rule-of-law-plan",
+      "title": "法治中国建设规划（2020—2025年）正式文本",
+      "url": "https://www.beijing.gov.cn/zhengce/zhengcefagui/202101/t20210111_2210663.html",
+      "scope": "法治体系五大组成、共同推进与一体建设、立法执法司法守法、政府与社会建设；仅使用稳定制度原理",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "legal-thinking-2024",
+      "title": "司法部：法治思维与依法行政",
+      "url": "https://www.moj.gov.cn/pub/sfbgw/qmyfzg/202403/t20240305_495596.html",
+      "scope": "法律至上、权由法定、权依法使、依法行政与法治思维",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "justice-values",
+      "title": "司法部：法治为了人民与公平正义",
+      "url": "https://www.moj.gov.cn/pub/sfbgw/zwgkztzl/xxxcgcxjpfzsx/fzsxllqy/202111/t20211111_441313.html",
+      "scope": "公平正义、保障人权、公众参与与程序正当",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "youth-legal-education",
+      "title": "教育部司法部全国普法办：青少年法治教育大纲",
+      "url": "https://www.moe.gov.cn/srcsite/A02/s5913/s5933/201607/t20160718_272115.html",
+      "scope": "法律知识、法治观念与依法实践相结合，权利救济与守法教育",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "xi-outline-2025",
+      "title": "司法部：习近平法治思想学习纲要2025年版十二个坚持",
+      "url": "https://www.moj.gov.cn/pub/sfbgw/gwxw/xwyw/ywzfyw/202512/t20251210_529238.html",
+      "scope": "十二个坚持、新增依法治国和依规治党有机统一、第五个坚持表述更新；不将早期口径泛化",
+      "verifiedAt": "2026-10-22",
+      "additionalUrls": [
+        "https://www.moj.gov.cn/pub/sfbgw/zwgkztzl/xxxcgcxjpfzsx/fzsxpljj/202511/t20251125_528487.html"
+      ]
+    },
+    {
+      "id": "constitution",
+      "title": "中华人民共和国宪法（2018年修正）",
+      "url": "https://www.mofcom.gov.cn/xxgcxjpxsdzgtsshzysx/zywj/art/2018/art_45c1e16fe351469090d53e63178268c8.html",
+      "scope": "总纲、公民基本权利义务、国家机构；不设置非必需年龄票数细节题",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "legislation-2023",
+      "title": "中华人民共和国立法法（2023年修正）",
+      "url": "https://hubca.miit.gov.cn/zwgk/zcwj/flfg/art/2023/art_617433c825534c34a1104d67a6254ba2.html",
+      "scope": "立法权限程序、规范形式、效力等级与第104条不溯及既往规则",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "civil-code",
+      "title": "中华人民共和国民法典全文",
+      "url": "https://tjca.miit.gov.cn/zwgk/zcwj/flfg/art/2020/art_20cf1a2e1b854924b5caa744c8045d1f.html",
+      "scope": "平等主体、自然人法人、民事权利义务、人格利益与民事责任",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "administrative-penalty",
+      "title": "中华人民共和国行政处罚法（2021年修订）",
+      "url": "https://www.moe.gov.cn/jyb_sjzl/sjzl_zcfg/zcfg_qtxgfl/202110/t20211025_574849.html",
+      "scope": "合法公正公开、过罚相当、处罚教育结合、告知陈述申辩等程序保障",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "criminal-principles",
+      "title": "刑法基本原则及第12条溯及力官方核验",
+      "url": "https://jtgl.beijing.gov.cn/jgj/jgxx/flfg/fl/11033925/index.html",
+      "scope": "只使用第3—6条与第12条；核对刑法修正案十二未更改这些总则，不引入旧年龄刑期罪名",
+      "verifiedAt": "2026-10-22",
+      "additionalUrls": [
+        "https://fgk.chinatax.gov.cn/zcfgk/c100009/c5233391/content.html",
+        "https://www.spp.gov.cn/spp/llyj/201906/t20190604_443453.shtml"
+      ]
+    },
+    {
+      "id": "court-organization",
+      "title": "中华人民共和国人民法院组织法",
+      "url": "https://xzfy.moj.gov.cn/c/2021-01-06/487594.shtml",
+      "scope": "国家审判机关、依法独立审判、公正司法与诉讼权利保障",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "legal-basics",
+      "title": "审计署：什么是法律；政府公开法律基础知识",
+      "url": "https://www.audit.gov.cn/n6/n37/n60/c12149/content.html",
+      "scope": "法的概念本质与法律关系结构；具体民事概念另以民法典核对",
+      "verifiedAt": "2026-10-22",
+      "additionalUrls": [
+        "https://www.dengzhou.gov.cn/2015/07-29/1180944.html"
+      ]
+    },
+    {
+      "id": "legal-system-guide",
+      "title": "商务部：中国外商投资指引法律体系说明",
+      "url": "https://fdi.mofcom.gov.cn/resource/pdf/wx2024/2024CN.pdf",
+      "scope": "体系结构与常见部门法调整对象；部门范围以大纲列举为准，不考固定法律总数",
+      "verifiedAt": "2026-10-22",
+      "additionalUrls": [
+        "https://www.hppc.gov.cn/llyj/1859402696764076034.html"
+      ]
+    },
+    {
+      "id": "national-defense-law",
+      "title": "全国人大：中华人民共和国国防法2020年修订",
+      "url": "https://en.npc.gov.cn.cdurl.cn/2020-12/26/c_674696.htm",
+      "scope": "国防、武装力量与军事法治一般领域；机构职权另以中文宪法核对",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "ecological-code-2026",
+      "title": "生态环境法典2026年8月15日施行",
+      "url": "https://legalinfo.moj.gov.cn/pub/sfbzhfx/zt/2026zt0106/xxxcsthjfd20260817/yw20260817/202608/t20260818_538603.html",
+      "scope": "2026年3月12日通过、8月15日施行；污染防治、生态保护与绿色低碳，不以废止法作当前一般依据",
+      "verifiedAt": "2026-10-22",
+      "additionalUrls": [
+        "https://www.court.gov.cn/zixun/xiangqing/508001.html"
+      ]
+    },
+    {
+      "id": "current-law-directory-2026",
+      "title": "全国人大现行有效法律目录2026年3月快照",
+      "url": "https://www.npc.gov.cn/c2/c30834/202603/P020260316580245162685.pdf",
+      "scope": "核对法典更新；不将该快照宣称为2026年10月完整法律清单",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "legal-literacy-2024",
+      "title": "司法部：不断提升青少年群体的法治素养",
+      "url": "https://www.moj.gov.cn/pub/sfbgw/zwgkztzl/xxxcgcxjpfzsx/fzsxllqy/202403/t20240322_496520.html",
+      "scope": "尊法是前提、学法是基础、守法是底线、用法是目的；另以官方参考样卷第19题核对首要前提",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "xi-outline-2021",
+      "title": "司法部：2021年十一个坚持及第五项旧表述",
+      "url": "https://www.moj.gov.cn/pub/sfbgw/zwgkztzl/xxxcgcxjpfzsx/fzsxllqy/202111/t20211111_441312.html",
+      "additionalUrls": [
+        "https://www.xjpcsc.gov.cn/uploads/20211208/704cd5f77d5c5cfe1cbd945e686a3506.pdf"
+      ],
+      "scope": "2021年体系及第五项治理体系治理能力现代化；与2025年新版本对照，不抹去2023指定教材口径",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "textbook-2023",
+      "title": "思想道德与法治2023年版高校托管教材",
+      "url": "https://www.ytcc.edu.cn/__local/4/28/18/7CE4A8635D5472693F597E45014_A4E6C9AA_30E96EC.pdf",
+      "scope": "核验指定教材版本和原有法治思想口径；原创改写，不整段复制",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "legal-interpretation-2024",
+      "title": "检察机关：基层案例编写要体现三个属性",
+      "url": "https://ntcc.jsjc.gov.cn/zt/jcll/202403/t20240329_626876.shtml",
+      "scope": "正式解释与非正式解释、学理解释定位及法源形式",
+      "verifiedAt": "2026-10-22"
+    },
+    {
+      "id": "criminal-sources",
+      "title": "人大与审判机关：刑法的规范载体与刑法典",
+      "url": "https://www.ynrd.gov.cn/html/2006/fazhixuanchuan_0429/2292.html",
+      "additionalUrls": [
+        "https://www.sdcourt.gov.cn/jntlfy/380112/380118/4072047/index.html",
+        "https://www.npc.gov.cn/c2/c30834/202603/P020260316580245162685.pdf"
+      ],
+      "scope": "仅核对刑法典、修正案、单行刑事规范及其他法律相关刑事责任规范的一般分类；不沿用旧文的具体罪名数量与旧法条",
+      "verifiedAt": "2026-10-22"
+    }
+  ],
+  "notes": [
+    "PDF页码自封面起按1based计算，不是印刷页号；第八章学习目的在第14页开始，考核要求均在第15页。",
+    "逐条拆分并列考核要求，部门法的概念与构成分别映射；题干、情境和参考表达为原创训练，不冒充真题。",
+    "每专题至少三道单选和一道简答，另含十八道情境论述；认知层级按题目任务标注，重点对应大纲章节重点。",
+    "常规题避免非必需时效金额细节；2025年思想纲要、2026年生态环境法典已按官方来源核验。",
+    "刑法第12条从旧兼从轻与立法法第104条一般不溯及既往及有利保护特别规定分开说明。",
+    "2023指定教材对应2021纲要十一个坚持，2025纲要十二个坚持作为发展对照，题干分别明确版本。",
+    "2026-10-22作者全量扫描180道原单选，177题替换为同域干扰项；保留原ID、题序、正确索引与正确选项文字，新增4题追加末尾。"
+  ],
+  "revision": {
+    "reviewDate": "2026-10-22",
+    "reviewedOriginalSingles": 180,
+    "changedOriginalSingleOptions": 177,
+    "negativeStemDisambiguation": {
+      "questionIds": ["sf-law-059", "sf-law-066", "sf-theory-010", "sf-theory-014", "sf-theory-059", "sf-theory-063", "sf-theory-066", "sf-system-019", "sf-system-090"],
+      "change": "独立复读发现九题反向设问的干扰项也能概括题干错误。已将各题非标答选项改为明确错误的法理命题，避免多个选项同时准确指出题干缺陷；标答、索引与题序保持。",
+      "status": "作者修复完成，待独立复核"
+    },
+    "preserved": "原有258题的ID、顺序、原180单选正确答案索引及正确选项文字均保留；补题追加",
+    "changedQuestionIds": [
+      "sf-law-001",
+      "sf-law-003",
+      "sf-law-005",
+      "sf-law-006",
+      "sf-law-007",
+      "sf-law-009",
+      "sf-law-010",
+      "sf-law-011",
+      "sf-law-013",
+      "sf-law-014",
+      "sf-law-015",
+      "sf-law-017",
+      "sf-law-018",
+      "sf-law-019",
+      "sf-law-021",
+      "sf-law-022",
+      "sf-law-023",
+      "sf-law-025",
+      "sf-law-026",
+      "sf-law-027",
+      "sf-law-029",
+      "sf-law-030",
+      "sf-law-031",
+      "sf-law-033",
+      "sf-law-034",
+      "sf-law-035",
+      "sf-law-037",
+      "sf-law-038",
+      "sf-law-039",
+      "sf-law-041",
+      "sf-law-042",
+      "sf-law-043",
+      "sf-law-045",
+      "sf-law-046",
+      "sf-law-047",
+      "sf-law-049",
+      "sf-law-050",
+      "sf-law-051",
+      "sf-law-053",
+      "sf-law-054",
+      "sf-law-055",
+      "sf-law-057",
+      "sf-law-058",
+      "sf-law-059",
+      "sf-law-061",
+      "sf-law-062",
+      "sf-law-063",
+      "sf-law-065",
+      "sf-law-066",
+      "sf-law-067",
+      "sf-law-069",
+      "sf-law-070",
+      "sf-law-071",
+      "sf-theory-001",
+      "sf-theory-002",
+      "sf-theory-003",
+      "sf-theory-005",
+      "sf-theory-006",
+      "sf-theory-007",
+      "sf-theory-009",
+      "sf-theory-010",
+      "sf-theory-011",
+      "sf-theory-013",
+      "sf-theory-014",
+      "sf-theory-015",
+      "sf-theory-017",
+      "sf-theory-018",
+      "sf-theory-019",
+      "sf-theory-021",
+      "sf-theory-022",
+      "sf-theory-023",
+      "sf-theory-025",
+      "sf-theory-026",
+      "sf-theory-027",
+      "sf-theory-029",
+      "sf-theory-030",
+      "sf-theory-031",
+      "sf-theory-033",
+      "sf-theory-034",
+      "sf-theory-035",
+      "sf-theory-037",
+      "sf-theory-038",
+      "sf-theory-039",
+      "sf-theory-041",
+      "sf-theory-042",
+      "sf-theory-043",
+      "sf-theory-045",
+      "sf-theory-046",
+      "sf-theory-049",
+      "sf-theory-050",
+      "sf-theory-051",
+      "sf-theory-053",
+      "sf-theory-054",
+      "sf-theory-055",
+      "sf-theory-057",
+      "sf-theory-058",
+      "sf-theory-059",
+      "sf-theory-061",
+      "sf-theory-062",
+      "sf-theory-063",
+      "sf-theory-065",
+      "sf-theory-066",
+      "sf-theory-067",
+      "sf-theory-069",
+      "sf-theory-070",
+      "sf-theory-071",
+      "sf-system-001",
+      "sf-system-002",
+      "sf-system-003",
+      "sf-system-005",
+      "sf-system-006",
+      "sf-system-007",
+      "sf-system-009",
+      "sf-system-010",
+      "sf-system-011",
+      "sf-system-013",
+      "sf-system-014",
+      "sf-system-015",
+      "sf-system-017",
+      "sf-system-018",
+      "sf-system-019",
+      "sf-system-021",
+      "sf-system-022",
+      "sf-system-023",
+      "sf-system-025",
+      "sf-system-026",
+      "sf-system-027",
+      "sf-system-029",
+      "sf-system-030",
+      "sf-system-031",
+      "sf-system-033",
+      "sf-system-034",
+      "sf-system-035",
+      "sf-system-037",
+      "sf-system-038",
+      "sf-system-039",
+      "sf-system-041",
+      "sf-system-042",
+      "sf-system-043",
+      "sf-system-045",
+      "sf-system-046",
+      "sf-system-047",
+      "sf-system-049",
+      "sf-system-050",
+      "sf-system-051",
+      "sf-system-053",
+      "sf-system-054",
+      "sf-system-055",
+      "sf-system-057",
+      "sf-system-058",
+      "sf-system-059",
+      "sf-system-061",
+      "sf-system-062",
+      "sf-system-063",
+      "sf-system-065",
+      "sf-system-066",
+      "sf-system-067",
+      "sf-system-069",
+      "sf-system-070",
+      "sf-system-071",
+      "sf-system-074",
+      "sf-system-075",
+      "sf-system-077",
+      "sf-system-078",
+      "sf-system-079",
+      "sf-system-081",
+      "sf-system-082",
+      "sf-system-083",
+      "sf-system-085",
+      "sf-system-086",
+      "sf-system-087",
+      "sf-system-089",
+      "sf-system-090",
+      "sf-system-091",
+      "sf-system-093",
+      "sf-system-094",
+      "sf-system-095"
+    ],
+    "writtenAnswerRevisions": [
+      "sf-law-032",
+      "sf-law-036",
+      "sf-law-075",
+      "sf-theory-048",
+      "sf-theory-056",
+      "sf-system-084"
+    ],
+    "conceptRevisions": [
+      "law-08",
+      "law-09",
+      "theory-04",
+      "system-03",
+      "system-17",
+      "system-21"
+    ],
+    "addedQuestionIds": [
+      "sf-law-extra-001",
+      "sf-law-extra-002",
+      "sf-theory-extra-001",
+      "sf-system-extra-001"
+    ],
+    "independentReviewStatus": "作者完成修订与结构核验；交另一代理对最终版本独立复审，本条不表示已通过该复审"
+  },
+  "statistics": {
+    "topics": 60,
+    "questions": 262,
+    "single": 184,
+    "short": 60,
+    "essay": 18,
+    "requirements": 84
+  }
+}
