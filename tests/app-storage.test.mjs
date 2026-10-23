@@ -43,7 +43,7 @@ function browser(deliverEvents=true) {
   const run=code=>vm.runInContext(code,context);
   Object.assign(owner,{windowEvents,run});tabs.push(owner);run(source);
   return {run,element:el,
-   click(action,id,extra={}){events.click({target:{closest:()=>({dataset:{action,id,...extra}})}});run('render();');},
+   click(action,id,extra={}){const before=location.hash;events.click({target:{closest:()=>({dataset:{action,id,...extra}})}});if(location.hash!==before)run('render();');},
    async score(id,value){await events.change({target:{id:'score-'+id,dataset:{selfScore:id},value:String(value)}});},
    input(id,value,questionId){events.input({target:{id,value,dataset:{id:questionId}}});},
   };
@@ -174,4 +174,63 @@ test('the knowledge directory offers only an existing practice and follows an ex
  assert.deepEqual(fresh.questionIds,data.questions.filter(q=>q.type==='single'&&q.topicIds?.includes(topic.id)).map(q=>q.id));
  a.click('nav-knowledge');assert.ok(hasPracticeReturn(a.element('#app').innerHTML));a.click('resume-practice');
  assert.deepEqual(practiceSnapshot(a).questionIds,fresh.questionIds);assert.equal(practiceSnapshot(a).index,0);
+});
+
+test('single answer preview needs no selection and preserves selections and learning records',()=>{
+ const courseId='15042',data=catalog.getCourseData(courseId),q=data.questions.find(q=>q.type==='single'),b=browser();
+ const wrong=data.questions.find(item=>item.type==='single'&&item.id!==q.id);
+ const existing=study.recordAnswer(study.createInitialState(),wrong.id,false,(wrong.answer+1)%wrong.options.length,new Date('2026-10-22T08:00:00Z'));
+ b.data.set(stateKey(courseId),JSON.stringify(existing));const a=b.tab(courseId);
+ a.click('start-sequence');
+ const snapshot=practiceSnapshot(a),saved=b.read(stateKey(courseId)),main=a.element('#app').innerHTML;
+ a.click('preview-answer');
+ assert.equal(a.element('#dialog').open,true);assert.match(a.element('#dialog').innerHTML,/不会计入练习记录/);
+ assert.ok(a.element('#dialog').innerHTML.includes(`<strong>${options.answerLetter(q)}</strong>`),'the correct letter follows the displayed option order');
+ assert.deepEqual(practiceSnapshot(a),snapshot);assert.deepEqual(b.read(stateKey(courseId)),saved);assert.equal(a.element('#app').innerHTML,main);
+ a.click('close-dialog');assert.equal(a.element('#dialog').open,false);
+ const chooseButtons=a.element('#app').innerHTML.match(/<button\b[^>]*data-action="choose"[^>]*>/g)||[];
+ assert.equal(chooseButtons.length,q.options.length);assert.ok(chooseButtons.every(button=>!button.includes('disabled')));
+ const choice=(q.answer+1)%q.options.length;a.click('choose',String(choice));
+ const selected=practiceSnapshot(a),selectedState=b.read(stateKey(courseId));
+ a.click('preview-answer');a.click('close-dialog');
+ assert.deepEqual(practiceSnapshot(a),selected);assert.equal(practiceSnapshot(a).answers[q.id],choice);assert.deepEqual(b.read(stateKey(courseId)),selectedState);
+ assert.equal(selectedState.records[q.id],undefined);assert.deepEqual(selectedState.records,saved.records);assert.deepEqual(selectedState.daily,saved.daily);
+ assert.equal(selectedState.records[wrong.id].lastResult,'wrong','preview must not clear an existing wrong answer');
+});
+
+test('written answer preview preserves an empty or existing draft and leaves it editable',()=>{
+ const courseId='15041',data=catalog.getCourseData(courseId),q=data.questions.find(q=>q.type==='essay'),b=browser(),a=b.tab(courseId);
+ a.click('open-question',q.id,{mode:'writing'});
+ const snapshot=practiceSnapshot(a),empty=b.read(stateKey(courseId));
+ a.click('preview-answer');assert.match(a.element('#dialog').innerHTML,/参考作答/);a.click('close-dialog');
+ assert.deepEqual(b.read(stateKey(courseId)),empty);assert.deepEqual(practiceSnapshot(a),snapshot);
+ const textarea=a.element('#app').innerHTML.match(/<textarea\b[^>]*id="practice-answer"[^>]*>/)?.[0];
+ assert.ok(textarea);assert.equal(textarea.includes('readonly'),false);
+ a.input('practice-answer','先列答题框架。',q.id);const draft=b.read(stateKey(courseId));
+ a.click('preview-answer');a.click('close-dialog');assert.deepEqual(b.read(stateKey(courseId)),draft);
+ a.input('practice-answer','保留原观点，再补充材料分析。',q.id);
+ assert.equal(b.read(stateKey(courseId)).drafts[q.id],'保留原观点，再补充材料分析。');
+ assert.deepEqual(b.read(stateKey(courseId)).records,{});assert.deepEqual(b.read(stateKey(courseId)).daily,{});
+ assert.notEqual(practiceSnapshot(a).revealed[q.id],true);assert.notEqual(practiceSnapshot(a).recorded[q.id],true);
+});
+
+test('previewing an answer does not replace explicit submission or self assessment',()=>{
+ const courseId='15040',data=catalog.getCourseData(courseId),b=browser(),a=b.tab(courseId),single=data.questions.find(q=>q.type==='single');
+ a.click('start-sequence');a.click('preview-answer');a.click('close-dialog');
+ a.click('choose',String(single.answer));a.click('reveal');a.click('reveal');
+ assert.equal(b.read(stateKey(courseId)).records[single.id].attempts,1);
+ const written=data.questions.find(q=>q.type==='short');a.click('open-question',written.id,{mode:'writing'});
+ a.click('preview-answer');a.click('close-dialog');a.input('practice-answer','按要点独立完成作答。',written.id);a.click('reveal');
+ assert.equal(b.read(stateKey(courseId)).records[written.id],undefined,'revealing a written reference still requires an explicit self assessment');
+ a.click('assess-correct');a.click('assess-correct');
+ const saved=b.read(stateKey(courseId));assert.equal(saved.records[written.id].attempts,1);assert.equal(saved.records[single.id].attempts,1);
+ assert.equal(Object.values(saved.daily).reduce((sum,day)=>sum+day.count,0),2);
+});
+
+test('answer preview is a practice action and has no entry during a mock exam',()=>{
+ const courseId='15041',b=browser(),a=b.tab(courseId);a.click('start-sequence');
+ assert.match(a.element('#app').innerHTML,/data-action="preview-answer"/);
+ a.click('nav-exams');a.click('new-exam');
+ assert.match(a.element('#app').innerHTML,/模拟训练进行中/);assert.doesNotMatch(a.element('#app').innerHTML,/data-action="preview-answer"/);
+ assert.equal(a.element('#dialog').open,false);
 });
