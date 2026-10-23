@@ -1,6 +1,6 @@
 # 本轮备考版本验收记录
 
-生成：2026-10-22T06:27:08.609Z
+生成：2026-10-23T03:00:35.678Z
 
 - 共 805 道原创题，其中 715 道专题训练题；162 个专题。
 - 大纲知识要求的结构审计见 bank-audit.md；独立内容审查见 review-foundations.md、review-ethics.md、review-law.md、review-updates.md。

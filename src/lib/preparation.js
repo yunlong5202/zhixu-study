@@ -1,4 +1,4 @@
-import { createExam, getLocalDateKey, shuffle } from './study.js';
+import { createExam, getLocalDateKey, shuffle, normalizeExamPattern } from './study.js';
 
 const DAY = 86400000;
 const validTime = value => typeof value === 'string' && Number.isFinite(Date.parse(value));
@@ -72,7 +72,7 @@ export function getPreparationReport(questions,topics,chapters,state,now=new Dat
   const checks=[
     {id:'coverage',title:'考点训练覆盖至少 90%',value:`${coveredCount}/${topics.length} 个考点`,passed:reaches(coveredCount,topics.length,90),description:'每个考点至少独立练过两道选择题；只看讲解不计入。'},
     {id:'objective',title:'选择题掌握达到 85%',value:`${objectiveAnswered.length} 题已练 · ${ratio(objectiveCorrect,objective.length)}% 最近结果正确`,passed:objectiveAnswered.length>=100&&reaches(objectiveCorrect,objective.length,85)&&chapterReports.every(c=>c.objectiveCount>=10),description:'至少实际作答 100 道不同题，每单元至少 10 道；模拟未答按错纳入正确率，但不计考点覆盖或已练题数。门槛按未取整比例判断。'},
-    {id:'written',title:'核心考点笔试自评覆盖至少 80%',value:`${writtenCore}/${core.length} 个核心考点 · ${chapterReports.filter(c=>c.essayCount>0).length}/${chapters.length} 单元论述`,passed:reaches(writtenCore,core.length,80)&&chapterReports.every(c=>c.essayCount>0),description:'先独立写，再对照要点自评；每个单元至少完成一道论述。自评不能替代老师阅卷。'},
+    {id:'written',title:'核心考点笔试自评覆盖至少 80%',value:`${writtenCore}/${core.length} 个核心考点 · ${chapterReports.filter(c=>c.essayCount>0).length}/${chapters.length} 单元综合题`,passed:reaches(writtenCore,core.length,80)&&chapterReports.every(c=>c.essayCount>0),description:'先独立写，再对照要点自评；每个单元至少完成一道综合笔试题。自评不能替代老师阅卷。'},
     {id:'exams',title:'两套不同模拟训练均达到 75 分',value:recent.length?recent.map(h=>`${h.total} 分${h.selfReviewSaved?'':'（自评未保存）'}`).join(' / '):'尚未完成模拟',passed:distinctExams,description:'两套均须保存自评、客观题至少 40/50 分，且两套单选重复不超过 10 题。'}
   ];
   return {topicProgress,chapters:chapterReports,totalTopics:topics.length,coveredCount,masteredCount:topicProgress.filter(t=>t.mastered).length,coverage:ratio(coveredCount,topics.length),accuracy:ratio(objectiveCorrect,objective.length),checks,ready:checks.every(c=>c.passed),completedChecks:checks.filter(c=>c.passed).length,reviewDue:getReviewQueue(questions,state,now).length};
@@ -97,16 +97,17 @@ function balancedPick(pool,count,chapterIds,state,rng) {
   return picked.map(q=>q.id);
 }
 
-export function createBalancedExam(questions, chapters, state, rng=Math.random) {
+export function createBalancedExam(questions, chapters, state, rng=Math.random, configuration) {
+  const pattern = normalizeExamPattern(configuration);
   const indexed=questions.filter(q=>q.topicIds?.length);
-  if(indexed.length===0) return {...createExam(questions,rng),bankMode:'legacy'};
+  if(indexed.length===0) return {...createExam(questions,rng,pattern),bankMode:'legacy'};
   const chapterIds=chapters.map(c=>c.id);
   const forType=(type,level,count)=>{
     const preferred=indexed.filter(q=>q.type===type&&q.level===level);
     const available=preferred.length>=count&&chapterIds.every(id=>type!=='single'||preferred.some(q=>q.chapterId===id))?preferred:indexed.filter(q=>q.type===type);
     return balancedPick(available,count,chapterIds,state,rng);
   };
-  const singleIds=forType('single','recall',25),shortIds=forType('short','understand',5),essayIds=forType('essay','apply',3);
+  const singleIds=forType('single','recall',pattern.singleCount),shortIds=forType('short','understand',pattern.shortCount),essayIds=forType('essay','apply',pattern.essayOffered);
   const all=[...singleIds,...shortIds,...essayIds];
-  return {id:globalThis.crypto?.randomUUID?.()||`exam-${Date.now()}-${rng().toString(36).slice(2)}`,createdAt:new Date().toISOString(),questionIds:all,singleIds,shortIds,essayIds,durationMinutes:150,bankMode:'balanced',chapterCoverage:new Set(singleIds.map(id=>questions.find(q=>q.id===id).chapterId)).size,newQuestionCount:all.filter(id=>!state.records[id]).length};
+  return {id:globalThis.crypto?.randomUUID?.()||`exam-${Date.now()}-${rng().toString(36).slice(2)}`,createdAt:new Date().toISOString(),questionIds:all,singleIds,shortIds,essayIds,durationMinutes:pattern.durationMinutes,pattern,bankMode:'balanced',chapterCoverage:new Set(singleIds.map(id=>questions.find(q=>q.id===id).chapterId)).size,newQuestionCount:all.filter(id=>!state.records[id]).length};
 }

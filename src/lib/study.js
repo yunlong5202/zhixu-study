@@ -9,6 +9,31 @@ const isAnswer = (value) => (typeof value === 'string' && value.length <= 50000)
   || (Number.isSafeInteger(value) && value >= 0);
 const hasOwn = (object, key) => Object.prototype.hasOwnProperty.call(object, key);
 
+export const DEFAULT_EXAM_PATTERN = Object.freeze({
+  singleCount: 25, singlePoints: 2, shortCount: 5, shortPoints: 6,
+  essayOffered: 3, essayRequired: 2, essayPoints: 10, essayLabel: '论述题',
+  durationMinutes: 150, totalPoints: 100, passingPoints: 60,
+});
+
+export function normalizeExamPattern(value = DEFAULT_EXAM_PATTERN) {
+  if (!isObject(value)) throw new TypeError('试卷配置必须为对象');
+  const pattern = Object.fromEntries(Object.keys(DEFAULT_EXAM_PATTERN).map(key => [key, value[key] ?? DEFAULT_EXAM_PATTERN[key]]));
+  for (const key of ['singleCount', 'shortCount', 'essayOffered', 'essayRequired']) {
+    if (!Number.isSafeInteger(pattern[key]) || pattern[key] < 1 || pattern[key] > 100) throw new RangeError('试卷题量配置无效');
+  }
+  for (const key of ['singlePoints', 'shortPoints', 'essayPoints']) {
+    if (!Number.isFinite(pattern[key]) || pattern[key] <= 0 || pattern[key] > 100) throw new RangeError('试卷分值配置无效');
+  }
+  const total = pattern.singleCount * pattern.singlePoints + pattern.shortCount * pattern.shortPoints + pattern.essayRequired * pattern.essayPoints;
+  if (pattern.essayRequired > pattern.essayOffered || pattern.totalPoints !== 100 || Math.abs(total - pattern.totalPoints) > 1e-8
+    || !Number.isFinite(pattern.passingPoints) || pattern.passingPoints < 0 || pattern.passingPoints > total
+    || !Number.isInteger(pattern.durationMinutes) || pattern.durationMinutes < 1 || pattern.durationMinutes > 600
+    || typeof pattern.essayLabel !== 'string' || !pattern.essayLabel.length || pattern.essayLabel.length > 60) {
+    throw new RangeError('试卷配置的题量、分值或时长不合法');
+  }
+  return pattern;
+}
+
 export function createInitialState() {
   return {
     version: 1,
@@ -48,18 +73,22 @@ function validRecord(record) {
 }
 
 function validHistoryItem(item) {
+  let pattern;
+  try { pattern = normalizeExamPattern(item?.pattern); } catch { return false; }
+  const objectiveMax = pattern.singleCount * pattern.singlePoints;
+  const subjectiveMax = pattern.shortCount * pattern.shortPoints + pattern.essayRequired * pattern.essayPoints;
   return isObject(item) && isId(item.id) && isTimestamp(item.createdAt)
-    && Number.isInteger(item.objectiveScore) && item.objectiveScore >= 0
-    && item.objectiveScore <= 50 && item.objectiveScore % 2 === 0
-    && Number.isFinite(item.subjectiveScore) && item.subjectiveScore >= 0 && item.subjectiveScore <= 50
+    && Number.isFinite(item.objectiveScore) && item.objectiveScore >= 0
+    && item.objectiveScore <= objectiveMax && Math.abs(item.objectiveScore / pattern.singlePoints - Math.round(item.objectiveScore / pattern.singlePoints)) < 1e-8
+    && Number.isFinite(item.subjectiveScore) && item.subjectiveScore >= 0 && item.subjectiveScore <= subjectiveMax
     && Number.isFinite(item.total) && item.total >= 0 && item.total <= 100
     && Math.abs(item.total - item.objectiveScore - item.subjectiveScore) < 1e-8
-    && item.maxScore === 100 && isCount(item.answeredCount) && item.answeredCount <= 32
+    && item.maxScore === pattern.totalPoints && isCount(item.answeredCount) && item.answeredCount <= pattern.singleCount + pattern.shortCount + pattern.essayRequired
     && typeof item.needsSelfReview === 'boolean'
-    && (item.singleIds === undefined || (Array.isArray(item.singleIds) && item.singleIds.length === 25 && item.singleIds.every(isId) && new Set(item.singleIds).size === 25))
+    && (item.singleIds === undefined || (Array.isArray(item.singleIds) && item.singleIds.length === pattern.singleCount && item.singleIds.every(isId) && new Set(item.singleIds).size === pattern.singleCount))
     && (item.bankMode === undefined || ['balanced','legacy'].includes(item.bankMode))
     && (item.selfReviewSaved === undefined || typeof item.selfReviewSaved === 'boolean')
-    && (item.chapterCoverage === undefined || (isCount(item.chapterCoverage) && item.chapterCoverage <= 9));
+    && (item.chapterCoverage === undefined || (isCount(item.chapterCoverage) && item.chapterCoverage <= pattern.singleCount));
 }
 
 function validLastPractice(value) {
@@ -95,7 +124,7 @@ function normalizeState(value) {
     }
   }
   if (Array.isArray(value.history)) {
-    state.history = value.history.filter(validHistoryItem).slice(-MAX_HISTORY).map((item) => ({ ...item,...(item.singleIds?{singleIds:[...item.singleIds]}:{}) }));
+    state.history = value.history.filter(validHistoryItem).slice(-MAX_HISTORY).map((item) => ({ ...item,...(item.singleIds?{singleIds:[...item.singleIds]}:{}),...(item.pattern?{pattern:normalizeExamPattern(item.pattern)}:{}) }));
   }
   if (validLastPractice(value.lastPractice) && value.lastPractice !== null) {
     state.lastPractice = { ...value.lastPractice, questionIds: [...value.lastPractice.questionIds] };
@@ -229,24 +258,26 @@ function questionMap(questions) {
   return map;
 }
 
-export function createExam(questions, rng = Math.random) {
+export function createExam(questions, rng = Math.random, configuration = DEFAULT_EXAM_PATTERN) {
   questionMap(questions);
+  const pattern = normalizeExamPattern(configuration);
   const pick = (type, count) => {
     const pool = questions.filter((question) => question.type === type);
     if (pool.length < count) throw new RangeError(`题库中的 ${type} 题不足 ${count} 道`);
     return shuffle(pool, rng).slice(0, count).map((question) => question.id);
   };
-  const singleIds = pick('single', 25);
-  const shortIds = pick('short', 5);
-  const essayIds = pick('essay', 3);
+  const singleIds = pick('single', pattern.singleCount);
+  const shortIds = pick('short', pattern.shortCount);
+  const essayIds = pick('essay', pattern.essayOffered);
   const createdAt = new Date().toISOString();
   const id = globalThis.crypto?.randomUUID?.() || `exam-${Date.now()}-${Math.random().toString(36).slice(2)}`;
-  return { id, questionIds: [...singleIds, ...shortIds, ...essayIds], singleIds, shortIds, essayIds, durationMinutes: 150, createdAt };
+  return { id, questionIds: [...singleIds, ...shortIds, ...essayIds], singleIds, shortIds, essayIds, durationMinutes: pattern.durationMinutes, createdAt, pattern };
 }
 
 function validateExam(exam, map) {
   if (!isObject(exam)) throw new TypeError('无效的试卷');
-  for (const [key, type, count] of [['singleIds', 'single', 25], ['shortIds', 'short', 5], ['essayIds', 'essay', 3]]) {
+  const pattern = normalizeExamPattern(exam.pattern);
+  for (const [key, type, count] of [['singleIds', 'single', pattern.singleCount], ['shortIds', 'short', pattern.shortCount], ['essayIds', 'essay', pattern.essayOffered]]) {
     const ids = exam[key];
     if (!Array.isArray(ids) || ids.length !== count || new Set(ids).size !== count
       || ids.some((id) => !isId(id) || map.get(id)?.type !== type)) throw new TypeError('试卷题目数量、题型或编号不合法');
@@ -255,14 +286,15 @@ function validateExam(exam, map) {
   if (!Array.isArray(exam.questionIds) || exam.questionIds.length !== expected.length
     || new Set(exam.questionIds).size !== expected.length
     || expected.some((id) => !exam.questionIds.includes(id))) throw new TypeError('试卷题目清单不一致');
+  return pattern;
 }
 
 export function scoreExam(exam, questions, answers = {}, selfScores = {}, selectedEssayIds = []) {
   const map = questionMap(questions);
-  validateExam(exam, map);
+  const pattern = validateExam(exam, map);
   if (!isObject(answers) || !isObject(selfScores)) throw new TypeError('答案与自评分必须为对象');
-  if (!Array.isArray(selectedEssayIds) || selectedEssayIds.length !== 2 || new Set(selectedEssayIds).size !== 2
-    || selectedEssayIds.some((id) => !exam.essayIds.includes(id))) throw new RangeError('请从三道论述题中恰好选择两道');
+  if (!Array.isArray(selectedEssayIds) || selectedEssayIds.length !== pattern.essayRequired || new Set(selectedEssayIds).size !== pattern.essayRequired
+    || selectedEssayIds.some((id) => !exam.essayIds.includes(id))) throw new RangeError(`请从 ${pattern.essayOffered} 道${pattern.essayLabel}中选择 ${pattern.essayRequired} 道作答`);
   const examIds = new Set(exam.questionIds);
   const activeSubjectiveIds = new Set([...exam.shortIds, ...selectedEssayIds]);
   for (const [id, answer] of Object.entries(answers)) {
@@ -275,7 +307,7 @@ export function scoreExam(exam, questions, answers = {}, selfScores = {}, select
   }
   for (const [id, score] of Object.entries(selfScores)) {
     if (!activeSubjectiveIds.has(id)) throw new TypeError('自评分包含未选中的题目或非笔试题');
-    const max = map.get(id).type === 'short' ? 6 : 10;
+    const max = map.get(id).type === 'short' ? pattern.shortPoints : pattern.essayPoints;
     if (!Number.isFinite(score) || score < 0 || score > max) throw new RangeError(`自评分应在 0 至 ${max} 分之间`);
   }
   let objectiveScore = 0;
@@ -285,7 +317,7 @@ export function scoreExam(exam, questions, answers = {}, selfScores = {}, select
   for (const id of exam.singleIds) {
     if (typeof answers[id] !== 'number') continue;
     answeredCount += 1;
-    if (answers[id] === map.get(id).answer) objectiveScore += 2;
+    if (answers[id] === map.get(id).answer) objectiveScore += pattern.singlePoints;
   }
   for (const id of activeSubjectiveIds) {
     // A self score also confirms an answer written on paper, including a zero.
@@ -298,7 +330,7 @@ export function scoreExam(exam, questions, answers = {}, selfScores = {}, select
       needsSelfReview = true;
     }
   }
-  return { objectiveScore, subjectiveScore, total: objectiveScore + subjectiveScore, maxScore: 100, answeredCount, needsSelfReview };
+  return { objectiveScore, subjectiveScore, total: objectiveScore + subjectiveScore, maxScore: pattern.totalPoints, answeredCount, needsSelfReview };
 }
 
 export function applyExamSelfReview(state, exam, questions, date = new Date()) {
@@ -306,7 +338,9 @@ export function applyExamSelfReview(state, exam, questions, date = new Date()) {
   const selfScores = exam?.selfScores ?? {};
   const selectedEssayIds = exam?.selectedEssayIds ?? [];
   const score = scoreExam(exam, questions, answers, selfScores, selectedEssayIds);
-  if (score.needsSelfReview) throw new RangeError('请先完成全部七道主观题的自评');
+  const pattern = normalizeExamPattern(exam.pattern);
+  const writtenCount = pattern.shortCount + pattern.essayRequired;
+  if (score.needsSelfReview) throw new RangeError(`请先完成全部${writtenCount === 7 ? '七' : writtenCount}道主观题的自评`);
   getLocalDateKey(date);
 
   // Version 0.1 recorded only a boolean, without the attempt timestamps needed
@@ -330,7 +364,7 @@ export function applyExamSelfReview(state, exam, questions, date = new Date()) {
 
   let next = normalizeState(state);
   for (const id of ids) {
-    const max = map.get(id).type === 'short' ? 6 : 10;
+    const max = map.get(id).type === 'short' ? pattern.shortPoints : pattern.essayPoints;
     const result = selfScores[id] >= max * 0.6;
     const previous = recordedResults[id];
     const record = next.records[id];

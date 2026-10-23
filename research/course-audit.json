@@ -1,0 +1,986 @@
+{
+  "generatedAt": "2026-10-23T03:00:35.561Z",
+  "passed": true,
+  "courses": [
+    {
+      "courseId": "15040",
+      "name": "习近平新时代中国特色社会主义思想概论",
+      "generatedAt": "2026-10-23T03:00:35.557Z",
+      "scope": "数据结构、题量、稳定ID、重复题干、专题与大纲要求映射审计；不替代人工内容核验",
+      "passed": true,
+      "counts": {
+        "questions": 252,
+        "indexedQuestions": 252,
+        "legacyQuestions": 0,
+        "topics": 54,
+        "mappedRequirements": 0,
+        "single": 180,
+        "short": 54,
+        "essay": 18
+      },
+      "answerDistribution": [
+        45,
+        45,
+        45,
+        45
+      ],
+      "chapterStats": [
+        {
+          "id": "xg-ch00",
+          "title": "理论的形成与科学体系",
+          "topics": 3,
+          "questions": 14,
+          "single": 10,
+          "short": 3,
+          "essay": 1,
+          "recallSingle": 4,
+          "understandShort": 3
+        },
+        {
+          "id": "xg-ch01",
+          "title": "新时代坚持和发展中国特色社会主义",
+          "topics": 3,
+          "questions": 14,
+          "single": 10,
+          "short": 3,
+          "essay": 1,
+          "recallSingle": 4,
+          "understandShort": 3
+        },
+        {
+          "id": "xg-ch02",
+          "title": "以中国式现代化全面推进中华民族伟大复兴",
+          "topics": 3,
+          "questions": 14,
+          "single": 10,
+          "short": 3,
+          "essay": 1,
+          "recallSingle": 4,
+          "understandShort": 3
+        },
+        {
+          "id": "xg-ch03",
+          "title": "坚持党的全面领导",
+          "topics": 3,
+          "questions": 14,
+          "single": 10,
+          "short": 3,
+          "essay": 1,
+          "recallSingle": 4,
+          "understandShort": 3
+        },
+        {
+          "id": "xg-ch04",
+          "title": "坚持以人民为中心",
+          "topics": 3,
+          "questions": 14,
+          "single": 10,
+          "short": 3,
+          "essay": 1,
+          "recallSingle": 4,
+          "understandShort": 3
+        },
+        {
+          "id": "xg-ch05",
+          "title": "全面深化改革开放",
+          "topics": 3,
+          "questions": 14,
+          "single": 10,
+          "short": 3,
+          "essay": 1,
+          "recallSingle": 4,
+          "understandShort": 3
+        },
+        {
+          "id": "xg-ch06",
+          "title": "推动高质量发展",
+          "topics": 3,
+          "questions": 14,
+          "single": 10,
+          "short": 3,
+          "essay": 1,
+          "recallSingle": 4,
+          "understandShort": 3
+        },
+        {
+          "id": "xg-ch07",
+          "title": "社会主义现代化建设的教育、科技、人才战略",
+          "topics": 3,
+          "questions": 14,
+          "single": 10,
+          "short": 3,
+          "essay": 1,
+          "recallSingle": 4,
+          "understandShort": 3
+        },
+        {
+          "id": "xg-ch08",
+          "title": "发展全过程人民民主",
+          "topics": 3,
+          "questions": 14,
+          "single": 10,
+          "short": 3,
+          "essay": 1,
+          "recallSingle": 4,
+          "understandShort": 3
+        },
+        {
+          "id": "xg-ch09",
+          "title": "全面依法治国",
+          "topics": 3,
+          "questions": 14,
+          "single": 10,
+          "short": 3,
+          "essay": 1,
+          "recallSingle": 4,
+          "understandShort": 3
+        },
+        {
+          "id": "xg-ch10",
+          "title": "建设社会主义文化强国",
+          "topics": 3,
+          "questions": 14,
+          "single": 10,
+          "short": 3,
+          "essay": 1,
+          "recallSingle": 4,
+          "understandShort": 3
+        },
+        {
+          "id": "xg-ch11",
+          "title": "以保障和改善民生为重点加强社会建设",
+          "topics": 3,
+          "questions": 14,
+          "single": 10,
+          "short": 3,
+          "essay": 1,
+          "recallSingle": 4,
+          "understandShort": 3
+        },
+        {
+          "id": "xg-ch12",
+          "title": "建设社会主义生态文明",
+          "topics": 3,
+          "questions": 14,
+          "single": 10,
+          "short": 3,
+          "essay": 1,
+          "recallSingle": 3,
+          "understandShort": 3
+        },
+        {
+          "id": "xg-ch13",
+          "title": "维护和塑造国家安全",
+          "topics": 3,
+          "questions": 14,
+          "single": 10,
+          "short": 3,
+          "essay": 1,
+          "recallSingle": 4,
+          "understandShort": 3
+        },
+        {
+          "id": "xg-ch14",
+          "title": "建设巩固国防和强大人民军队",
+          "topics": 3,
+          "questions": 14,
+          "single": 10,
+          "short": 3,
+          "essay": 1,
+          "recallSingle": 4,
+          "understandShort": 3
+        },
+        {
+          "id": "xg-ch15",
+          "title": "坚持“一国两制”和推进祖国完全统一",
+          "topics": 3,
+          "questions": 14,
+          "single": 10,
+          "short": 3,
+          "essay": 1,
+          "recallSingle": 4,
+          "understandShort": 3
+        },
+        {
+          "id": "xg-ch16",
+          "title": "中国特色大国外交和推动构建人类命运共同体",
+          "topics": 3,
+          "questions": 14,
+          "single": 10,
+          "short": 3,
+          "essay": 1,
+          "recallSingle": 4,
+          "understandShort": 3
+        },
+        {
+          "id": "xg-ch17",
+          "title": "全面从严治党",
+          "topics": 3,
+          "questions": 14,
+          "single": 10,
+          "short": 3,
+          "essay": 1,
+          "recallSingle": 4,
+          "understandShort": 3
+        }
+      ],
+      "topicStats": [
+        {
+          "id": "xg-t00-1",
+          "chapterId": "xg-ch00",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t00-2",
+          "chapterId": "xg-ch00",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t00-3",
+          "chapterId": "xg-ch00",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t01-1",
+          "chapterId": "xg-ch01",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t01-2",
+          "chapterId": "xg-ch01",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t01-3",
+          "chapterId": "xg-ch01",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t02-1",
+          "chapterId": "xg-ch02",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t02-2",
+          "chapterId": "xg-ch02",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t02-3",
+          "chapterId": "xg-ch02",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t03-1",
+          "chapterId": "xg-ch03",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t03-2",
+          "chapterId": "xg-ch03",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t03-3",
+          "chapterId": "xg-ch03",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t04-1",
+          "chapterId": "xg-ch04",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t04-2",
+          "chapterId": "xg-ch04",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t04-3",
+          "chapterId": "xg-ch04",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t05-1",
+          "chapterId": "xg-ch05",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t05-2",
+          "chapterId": "xg-ch05",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t05-3",
+          "chapterId": "xg-ch05",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t06-1",
+          "chapterId": "xg-ch06",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t06-2",
+          "chapterId": "xg-ch06",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t06-3",
+          "chapterId": "xg-ch06",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t07-1",
+          "chapterId": "xg-ch07",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t07-2",
+          "chapterId": "xg-ch07",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t07-3",
+          "chapterId": "xg-ch07",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t08-1",
+          "chapterId": "xg-ch08",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t08-2",
+          "chapterId": "xg-ch08",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t08-3",
+          "chapterId": "xg-ch08",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t09-1",
+          "chapterId": "xg-ch09",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t09-2",
+          "chapterId": "xg-ch09",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t09-3",
+          "chapterId": "xg-ch09",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t10-1",
+          "chapterId": "xg-ch10",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t10-2",
+          "chapterId": "xg-ch10",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t10-3",
+          "chapterId": "xg-ch10",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t11-1",
+          "chapterId": "xg-ch11",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t11-2",
+          "chapterId": "xg-ch11",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t11-3",
+          "chapterId": "xg-ch11",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t12-1",
+          "chapterId": "xg-ch12",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t12-2",
+          "chapterId": "xg-ch12",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t12-3",
+          "chapterId": "xg-ch12",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t13-1",
+          "chapterId": "xg-ch13",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t13-2",
+          "chapterId": "xg-ch13",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t13-3",
+          "chapterId": "xg-ch13",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t14-1",
+          "chapterId": "xg-ch14",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t14-2",
+          "chapterId": "xg-ch14",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t14-3",
+          "chapterId": "xg-ch14",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t15-1",
+          "chapterId": "xg-ch15",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t15-2",
+          "chapterId": "xg-ch15",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t15-3",
+          "chapterId": "xg-ch15",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t16-1",
+          "chapterId": "xg-ch16",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t16-2",
+          "chapterId": "xg-ch16",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t16-3",
+          "chapterId": "xg-ch16",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t17-1",
+          "chapterId": "xg-ch17",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t17-2",
+          "chapterId": "xg-ch17",
+          "single": 4,
+          "written": 2
+        },
+        {
+          "id": "xg-t17-3",
+          "chapterId": "xg-ch17",
+          "single": 4,
+          "written": 2
+        }
+      ],
+      "errors": [],
+      "warnings": [
+        "本课程按章节建立专题练习，尚未宣称逐条穷尽大纲知识要求或当次动态时政。"
+      ],
+      "fingerprint": {
+        "path": "src/data/courses/15040.js",
+        "sha256": "7b891fe491c960452aaeb6cf5e6b1266c22af1bb3df7a62f764dbd85300d4caa",
+        "reviewMatches": true
+      }
+    },
+    {
+      "courseId": "15041",
+      "name": "毛泽东思想和中国特色社会主义理论体系概论",
+      "generatedAt": "2026-10-23T03:00:35.560Z",
+      "scope": "数据结构、题量、稳定ID、重复题干、专题与大纲要求映射审计；不替代人工内容核验",
+      "passed": true,
+      "counts": {
+        "questions": 194,
+        "indexedQuestions": 194,
+        "legacyQuestions": 0,
+        "topics": 46,
+        "mappedRequirements": 0,
+        "single": 138,
+        "short": 46,
+        "essay": 10
+      },
+      "answerDistribution": [
+        35,
+        35,
+        34,
+        34
+      ],
+      "chapterStats": [
+        {
+          "id": "mg-intro",
+          "title": "马克思主义中国化时代化的历史进程与理论成果",
+          "topics": 4,
+          "questions": 17,
+          "single": 12,
+          "short": 4,
+          "essay": 1,
+          "recallSingle": 8,
+          "understandShort": 4
+        },
+        {
+          "id": "mg-mao",
+          "title": "毛泽东思想及其历史地位",
+          "topics": 4,
+          "questions": 17,
+          "single": 12,
+          "short": 4,
+          "essay": 1,
+          "recallSingle": 6,
+          "understandShort": 4
+        },
+        {
+          "id": "mg-revolution",
+          "title": "新民主主义革命理论",
+          "topics": 5,
+          "questions": 21,
+          "single": 15,
+          "short": 5,
+          "essay": 1,
+          "recallSingle": 9,
+          "understandShort": 5
+        },
+        {
+          "id": "mg-transition",
+          "title": "社会主义改造理论",
+          "topics": 4,
+          "questions": 17,
+          "single": 12,
+          "short": 4,
+          "essay": 1,
+          "recallSingle": 8,
+          "understandShort": 4
+        },
+        {
+          "id": "mg-exploration",
+          "title": "社会主义建设道路初步探索的理论成果",
+          "topics": 5,
+          "questions": 21,
+          "single": 15,
+          "short": 5,
+          "essay": 1,
+          "recallSingle": 9,
+          "understandShort": 5
+        },
+        {
+          "id": "mg-system",
+          "title": "中国特色社会主义理论体系的形成发展",
+          "topics": 4,
+          "questions": 17,
+          "single": 12,
+          "short": 4,
+          "essay": 1,
+          "recallSingle": 8,
+          "understandShort": 4
+        },
+        {
+          "id": "mg-deng",
+          "title": "邓小平理论",
+          "topics": 6,
+          "questions": 25,
+          "single": 18,
+          "short": 6,
+          "essay": 1,
+          "recallSingle": 12,
+          "understandShort": 6
+        },
+        {
+          "id": "mg-represents",
+          "title": "“三个代表”重要思想",
+          "topics": 4,
+          "questions": 17,
+          "single": 12,
+          "short": 4,
+          "essay": 1,
+          "recallSingle": 8,
+          "understandShort": 4
+        },
+        {
+          "id": "mg-development",
+          "title": "科学发展观",
+          "topics": 6,
+          "questions": 25,
+          "single": 18,
+          "short": 6,
+          "essay": 1,
+          "recallSingle": 12,
+          "understandShort": 6
+        },
+        {
+          "id": "mg-ending",
+          "title": "不断谱写马克思主义中国化时代化新篇章",
+          "topics": 4,
+          "questions": 17,
+          "single": 12,
+          "short": 4,
+          "essay": 1,
+          "recallSingle": 4,
+          "understandShort": 4
+        }
+      ],
+      "topicStats": [
+        {
+          "id": "mg-intro-01",
+          "chapterId": "mg-intro",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-intro-02",
+          "chapterId": "mg-intro",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-intro-03",
+          "chapterId": "mg-intro",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-intro-04",
+          "chapterId": "mg-intro",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-mao-01",
+          "chapterId": "mg-mao",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-mao-02",
+          "chapterId": "mg-mao",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-mao-03",
+          "chapterId": "mg-mao",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-mao-04",
+          "chapterId": "mg-mao",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-revolution-01",
+          "chapterId": "mg-revolution",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-revolution-02",
+          "chapterId": "mg-revolution",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-revolution-03",
+          "chapterId": "mg-revolution",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-revolution-04",
+          "chapterId": "mg-revolution",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-revolution-05",
+          "chapterId": "mg-revolution",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-transition-01",
+          "chapterId": "mg-transition",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-transition-02",
+          "chapterId": "mg-transition",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-transition-03",
+          "chapterId": "mg-transition",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-transition-04",
+          "chapterId": "mg-transition",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-exploration-01",
+          "chapterId": "mg-exploration",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-exploration-02",
+          "chapterId": "mg-exploration",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-exploration-03",
+          "chapterId": "mg-exploration",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-exploration-04",
+          "chapterId": "mg-exploration",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-exploration-05",
+          "chapterId": "mg-exploration",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-system-01",
+          "chapterId": "mg-system",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-system-02",
+          "chapterId": "mg-system",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-system-03",
+          "chapterId": "mg-system",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-system-04",
+          "chapterId": "mg-system",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-deng-01",
+          "chapterId": "mg-deng",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-deng-02",
+          "chapterId": "mg-deng",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-deng-03",
+          "chapterId": "mg-deng",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-deng-04",
+          "chapterId": "mg-deng",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-deng-05",
+          "chapterId": "mg-deng",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-deng-06",
+          "chapterId": "mg-deng",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-represents-01",
+          "chapterId": "mg-represents",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-represents-02",
+          "chapterId": "mg-represents",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-represents-03",
+          "chapterId": "mg-represents",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-represents-04",
+          "chapterId": "mg-represents",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-development-01",
+          "chapterId": "mg-development",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-development-02",
+          "chapterId": "mg-development",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-development-03",
+          "chapterId": "mg-development",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-development-04",
+          "chapterId": "mg-development",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-development-05",
+          "chapterId": "mg-development",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-development-06",
+          "chapterId": "mg-development",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-ending-01",
+          "chapterId": "mg-ending",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-ending-02",
+          "chapterId": "mg-ending",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-ending-03",
+          "chapterId": "mg-ending",
+          "single": 3,
+          "written": 2
+        },
+        {
+          "id": "mg-ending-04",
+          "chapterId": "mg-ending",
+          "single": 3,
+          "written": 2
+        }
+      ],
+      "errors": [],
+      "warnings": [
+        "本课程按章节建立专题练习，尚未宣称逐条穷尽大纲知识要求或当次动态时政。"
+      ],
+      "fingerprint": {
+        "path": "src/data/courses/15041.js",
+        "sha256": "c7d868412cfeca0525577257bafcc929145e7195e60071872ac001f52e1af7c4",
+        "reviewMatches": true
+      }
+    }
+  ]
+}

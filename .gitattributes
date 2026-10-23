@@ -1,8 +1,10 @@
 * text=auto eol=lf
 *.cmd text eol=crlf
+*.bat text eol=crlf
 *.jpg binary
 *.png binary
 
 # Preserve the reviewed bytes: SHA-256 audit fingerprints must survive checkout.
 src/data/banks/*.js -text
+src/data/courses/*.js -text
 research/coverage-*.json -text

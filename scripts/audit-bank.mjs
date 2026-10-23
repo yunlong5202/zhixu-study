@@ -3,17 +3,17 @@ import {resolve} from 'node:path';
 import {pathToFileURL} from 'node:url';
 
 const normalized=text=>String(text).normalize('NFKC').replace(/[\p{P}\p{Z}\s]/gu,'').toLowerCase();
-export function auditBank({questions,topics,chapters,coverage}){
+export function auditBank({questions,topics,chapters,coverage=[],courseId='15042'}){
  const errors=[],warnings=[],ids=new Set(),stems=new Map(),topicMap=new Map(topics.map(t=>[t.id,t]));
  const indexed=questions.filter(q=>q.topicIds?.length),chapterIds=new Set(chapters.map(c=>c.id));
- if(indexed.length<600)errors.push(`考点训练题不足600道：${indexed.length}`);
- if(topics.length<140)errors.push(`细分专题不足140个：${topics.length}`);
+ if(courseId==='15042'&&indexed.length<600)errors.push(`考点训练题不足600道：${indexed.length}`);
+ if(courseId==='15042'&&topics.length<140)errors.push(`细分专题不足140个：${topics.length}`);
  if(topicMap.size!==topics.length)errors.push('知识专题ID重复');
  const answerDistribution=[0,0,0,0];
  for(const q of questions){
   if(ids.has(q.id))errors.push(`重复题目ID ${q.id}`);ids.add(q.id);
   if(!chapterIds.has(q.chapterId))errors.push(`未知章节 ${q.id}`);
-  if(q.courseId!=='15042')errors.push(`课程代码错误 ${q.id}`);
+  if(q.courseId!==courseId)errors.push(`课程代码错误 ${q.id}`);
   if(!q.stem||!q.explanation)errors.push(`题干或解析缺失 ${q.id}`);
   if([q.stem,q.explanation,q.sampleAnswer,...(q.options||[])].some(t=>typeof t==='string'&&(/\?{3,}|\uFFFD/u.test(t))))errors.push(`题目含编码占位或替换字符 ${q.id}`);
   if(!q.topicIds?.length)continue; // v0.1情境题保留旧ID，单独计数。
@@ -40,7 +40,7 @@ export function auditBank({questions,topics,chapters,coverage}){
  const chapterStats=chapters.map(c=>{
   const qs=indexed.filter(q=>q.chapterId===c.id),ts=topics.filter(t=>t.chapterId===c.id);
   const data={id:c.id,title:c.title,topics:ts.length,questions:qs.length,single:qs.filter(q=>q.type==='single').length,short:qs.filter(q=>q.type==='short').length,essay:qs.filter(q=>q.type==='essay').length,recallSingle:qs.filter(q=>q.type==='single'&&q.level==='recall').length,understandShort:qs.filter(q=>q.type==='short'&&q.level==='understand').length};
-  if(data.essay<3||data.recallSingle<8||data.understandShort<3)errors.push(`章节题型或能力池不足 ${c.id}`);
+  if(courseId==='15042'?(data.essay<3||data.recallSingle<8||data.understandShort<3):(data.single<10||data.short<2||data.essay<1))errors.push(`章节题型或能力池不足 ${c.id}`);
   return data;
  });
  let mappedRequirements=0;const mappedChapters=new Set(),coveredTopicIds=new Set();
@@ -59,8 +59,10 @@ export function auditBank({questions,topics,chapters,coverage}){
    }
   }
  }
- for(const c of chapters)if(!mappedChapters.has(c.id))errors.push(`章节缺少覆盖映射 ${c.id}`);
- for(const t of topics)if(!t.supplemental&&!coveredTopicIds.has(t.id))warnings.push(`专题未出现在大纲要求映射中 ${t.id}`);
+ if(courseId==='15042'||coverage.length){
+  for(const c of chapters)if(!mappedChapters.has(c.id))errors.push(`章节缺少覆盖映射 ${c.id}`);
+  for(const t of topics)if(!t.supplemental&&!coveredTopicIds.has(t.id))warnings.push(`专题未出现在大纲要求映射中 ${t.id}`);
+ }else warnings.push('本课程按章节建立专题练习，尚未宣称逐条穷尽大纲知识要求或当次动态时政。');
  const totalSingle=answerDistribution.reduce((a,b)=>a+b,0);
  if(answerDistribution.some(n=>n/totalSingle<0.15||n/totalSingle>0.4))errors.push(`正确选项位置分布失衡 ${answerDistribution.join('/')}`);
  return {generatedAt:new Date().toISOString(),scope:'数据结构、题量、稳定ID、重复题干、专题与大纲要求映射审计；不替代人工内容核验',passed:errors.length===0,counts:{questions:questions.length,indexedQuestions:indexed.length,legacyQuestions:questions.length-indexed.length,topics:topics.length,mappedRequirements,single:totalSingle,short:indexed.filter(q=>q.type==='short').length,essay:indexed.filter(q=>q.type==='essay').length},answerDistribution,chapterStats,topicStats,errors,warnings};
