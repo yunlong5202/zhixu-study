@@ -1,6 +1,7 @@
 export const STORAGE_KEY = 'xue-study-state-v1';
 
 const MAX_HISTORY = 1000;
+const PRACTICE_MAP_FIELDS = ['answers', 'revealed', 'recorded'];
 const UNSAFE_KEYS = new Set(['__proto__', 'constructor', 'prototype']);
 const isObject = (value) => value !== null && typeof value === 'object' && !Array.isArray(value);
 const isCount = (value) => Number.isSafeInteger(value) && value >= 0;
@@ -92,11 +93,35 @@ function validHistoryItem(item) {
 }
 
 function validLastPractice(value) {
-  return value === null || (isObject(value) && Array.isArray(value.questionIds)
+  if (value === null) return true;
+  if (!(isObject(value) && Array.isArray(value.questionIds)
     && value.questionIds.length > 0 && value.questionIds.every(isId)
     && new Set(value.questionIds).size === value.questionIds.length
     && isCount(value.index) && value.index < value.questionIds.length
-    && typeof value.label === 'string' && value.label.length <= 200);
+    && typeof value.label === 'string' && value.label.length <= 200)) return false;
+  const ids = new Set(value.questionIds);
+  for (const field of PRACTICE_MAP_FIELDS) {
+    if (!hasOwn(value, field)) continue;
+    if (!isObject(value[field])) return false;
+    for (const [id, item] of Object.entries(value[field])) {
+      if (!ids.has(id)) return false;
+      if (field === 'answers') {
+        if (!Number.isInteger(item) || item < 0 || item > 3) return false;
+      } else if (item !== true) return false;
+      if (field === 'recorded' && (!isObject(value.revealed)
+        || !hasOwn(value.revealed, id) || value.revealed[id] !== true)) return false;
+    }
+  }
+  return true;
+}
+
+function cloneLastPractice(value) {
+  // Persist only the cursor and optional round maps, with independent copies.
+  const result = { questionIds: [...value.questionIds], index: value.index, label: value.label };
+  for (const field of PRACTICE_MAP_FIELDS) {
+    if (hasOwn(value, field)) result[field] = { ...value[field] };
+  }
+  return result;
 }
 
 // Reading is deliberately non-destructive: invalid fields are skipped in memory,
@@ -127,7 +152,7 @@ function normalizeState(value) {
     state.history = value.history.filter(validHistoryItem).slice(-MAX_HISTORY).map((item) => ({ ...item,...(item.singleIds?{singleIds:[...item.singleIds]}:{}),...(item.pattern?{pattern:normalizeExamPattern(item.pattern)}:{}) }));
   }
   if (validLastPractice(value.lastPractice) && value.lastPractice !== null) {
-    state.lastPractice = { ...value.lastPractice, questionIds: [...value.lastPractice.questionIds] };
+    state.lastPractice = cloneLastPractice(value.lastPractice);
   }
   return state;
 }

@@ -123,10 +123,19 @@ function renderNotebook() {
 function startPractice(qs,label='顺序练习') {
  if(!qs.length) return toast('当前还没有可练习的题目');
  session={questionIds:qs.map(q=>q.id),index:0,label,answers:{},revealed:{},recorded:{}};
- state.lastPractice={questionIds:session.questionIds,index:0,label}; save(); go('practice');
+ savePractice(); go('practice');
+}
+function savePractice() {
+ if(!session)return;
+ const {questionIds,index,label,answers,revealed,recorded}=session;
+ state.lastPractice={questionIds:[...questionIds],index,label,answers:{...answers},revealed:{...revealed},recorded:{...recorded}};
+ save();
 }
 function getSession() {
- if(!session && state.lastPractice?.questionIds?.some(byId)) session={...state.lastPractice,questionIds:state.lastPractice.questionIds.filter(byId),answers:{},revealed:{},recorded:{}};
+ if(!session && state.lastPractice?.questionIds?.some(byId)) {
+  const saved=state.lastPractice;
+  session={...saved,questionIds:saved.questionIds.filter(byId),answers:{...saved.answers},revealed:{...saved.revealed},recorded:{...saved.recorded}};
+ }
  if(session) session.index=Math.max(0,Math.min(session.index,session.questionIds.length-1));
  return session;
 }
@@ -210,10 +219,14 @@ function switchCourse(id,confirmed=false) {
 }
 function settingsDialog() { showDialog(`<span class="tag">学习数据</span><h2>认真积累，记得备份。</h2><p>当前课程：${e(course.name)}（${e(course.id)}）。导出与导入仅针对这一门课程，其他课程的记录单独保存。备份文件可在另一个设备导入。</p><div class="data-actions"><button data-action="export"><span class="mode-icon sage">${icon('download')}</span><div><h3>导出学习记录</h3><p>保存为 JSON 备份文件</p></div>${icon('arrow')}</button><button data-action="import"><span class="mode-icon sand">${icon('upload')}</span><div><h3>导入学习记录</h3><p>选择备份文件，预览后再恢复</p></div>${icon('arrow')}</button></div><p class="muted">当前：已练 ${getStats(state,questions).attempted} 题 · 收藏 ${state.favorites.length} 题。正在进行的模拟考试请在本机完成。</p><input type="file" id="backup-file" accept=".json,application/json" hidden><div class="dialog-actions">${btn('完成','close-dialog')}</div>`); }
 const viewContext=()=>({state,questions,topics,chapters,sourceInfo,course,typeName,examPattern:examPattern(),e,icon,btn,pageHeading,progressBar});
-function renderKnowledge(){shell(knowledgeView(viewContext(),{...topicFilters,topicId:location.hash.split('/')[1]}));}
+function renderKnowledge(){
+ const s=getSession(),q=s?byId(s.questionIds[s.index]):null;
+ const returnBar=q?`<section class="practice-return" aria-label="当前答题进度"><div><strong>${e(s.label)} · 第 ${s.index+1} / ${s.questionIds.length} 题</strong><p>${e(q.stem)}</p></div>${btn(icon('back')+'返回当前答题','resume-practice','primary')}</section>`:'';
+ shell(returnBar+knowledgeView(viewContext(),{...topicFilters,topicId:location.hash.split('/')[1]}));
+}
 function renderPreparation(){shell(preparationView(viewContext()));}
 function render() { document.title=`${course.shortName||course.name} · 知序自考`;const r=route(); ({home:renderHome,knowledge:renderKnowledge,preparation:renderPreparation,chapters:renderChapters,writing:renderWriting,exams:renderExams,notebook:renderNotebook,practice:renderPractice,'exam-run':renderExamRun,results:renderResults}[r]||renderHome)(); }
-function movePractice(index) { session.index=index; state.lastPractice={questionIds:session.questionIds,index,label:session.label};save();render(); window.scrollTo({top:0,behavior:'instant'}); }
+function movePractice(index) { session.index=index;savePractice();render(); window.scrollTo({top:0,behavior:'instant'}); }
 
 document.addEventListener('click', event=>{
  const el=event.target.closest('[data-action]'); if(!el||el.disabled)return;
@@ -242,9 +255,9 @@ document.addEventListener('click', event=>{
  }
  if(a==='practice-notebook')return startPractice((notebookTab==='wrong'?getWrongQuestions(questions,state):getFavoriteQuestions(questions,state)).filter(q=>(notebookType==='all'||q.type===notebookType)&&(!searchText||q.stem.includes(searchText)||chapter(q.chapterId)?.title.includes(searchText))),notebookTab==='wrong'?'错题巩固':'收藏练习');
  if(a==='favorite') {state=toggleFavorite(state,id);save();return render();}
- if(a==='choose') {session.answers[session.questionIds[session.index]]=Number(id);return render();}
- if(a==='reveal') {const q=byId(session.questionIds[session.index]);session.revealed[q.id]=true;if(q.type==='single'&&!session.recorded[q.id]){state=recordAnswer(state,q.id,session.answers[q.id]===q.answer,session.answers[q.id]);session.recorded[q.id]=true;save();}return render();}
- if(a==='assess-wrong'||a==='assess-correct') {const q=byId(session.questionIds[session.index]);if(!session.recorded[q.id]){state=recordAnswer(state,q.id,a==='assess-correct',state.drafts[q.id]||'（纸上作答后自评）');session.recorded[q.id]=true;save();}return render();}
+ if(a==='choose') {session.answers[session.questionIds[session.index]]=Number(id);savePractice();return render();}
+ if(a==='reveal') {const q=byId(session.questionIds[session.index]);session.revealed[q.id]=true;if(q.type==='single'&&!session.recorded[q.id]){state=recordAnswer(state,q.id,session.answers[q.id]===q.answer,session.answers[q.id]);session.recorded[q.id]=true;}savePractice();return render();}
+ if(a==='assess-wrong'||a==='assess-correct') {const q=byId(session.questionIds[session.index]);if(!session.recorded[q.id]){state=recordAnswer(state,q.id,a==='assess-correct',state.drafts[q.id]||'（纸上作答后自评）');session.recorded[q.id]=true;savePractice();}return render();}
  if(a==='previous')return movePractice(Math.max(0,session.index-1));
  if(a==='jump')return movePractice(Number(id));
  if(a==='next') {if(session.index<session.questionIds.length-1)return movePractice(session.index+1);const count=Object.keys(session.recorded).length;showDialog(`<div class="dialog-icon">${icon('check')}</div><h2>这一轮，辛苦了。</h2><p>本轮共 ${session.questionIds.length} 题，已完成 ${count} 题。未作答的题目可以通过右侧答题卡继续练习。</p><div class="dialog-actions">${btn('继续回看','close-dialog','secondary')}${btn('回到学习首页','finish-practice')}</div>`);return;}
